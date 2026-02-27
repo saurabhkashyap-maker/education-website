@@ -47,7 +47,7 @@
             border-radius: 5px;
         }
 
-        /* ===== NAVBAR - FIXED FOR MOBILE ===== */
+        /* ===== NAVBAR ===== */
         .navbar {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -69,23 +69,28 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             cursor: pointer;
             flex-shrink: 0;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
             background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .logo-image span {
             color: white;
-            font-size: 20px;
+            font-size: 28px;
             font-weight: 700;
-            box-shadow: 0 5px 10px rgba(102,126,234,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .logo-text {
@@ -216,7 +221,6 @@
             }
         }
 
-        /* Rest of your existing styles remain the same */
         /* ===== WELCOME POPUP ===== */
         .welcome-popup {
             position: fixed;
@@ -614,6 +618,123 @@
         .resume-option label {
             font-weight: 500;
             color: #334155;
+        }
+
+        /* ===== PAY FEES PAGE ===== */
+        .payfees-page {
+            padding: 40px 0;
+        }
+
+        .payfees-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .payfees-header {
+            margin-bottom: 30px;
+        }
+
+        .payfees-header h1 {
+            font-size: 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .fee-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .fee-option {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .fee-option:hover {
+            border-color: #667eea;
+            background: #f0f4ff;
+            transform: translateY(-2px);
+        }
+
+        .fee-option.selected {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .fee-option .fee-name {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .fee-option .fee-amount {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 18px;
+        }
+
+        .fee-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #667eea;
+            margin-right: 10px;
+        }
+
+        .payfees-qr-section {
+            margin-top: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8fafc, #f0f4ff);
+            border-radius: 30px;
+            display: none;
+        }
+
+        .payfees-qr-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .payfees-qr-section .qr-code-box {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+
+        .payfees-qr-section .payment-info {
+            background: white;
+        }
+
+        /* ===== CLICKABLE CONTACT INFO ===== */
+        .clickable-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .clickable-link:hover {
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .clickable-link i {
+            color: #fbbf24;
         }
 
         /* ===== SLIDER ===== */
@@ -1167,6 +1288,18 @@
             font-size: 13px;
         }
 
+        .footer-content a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-content a:hover {
+            color: #fbbf24;
+        }
+
         .footer-content i {
             color: #fbbf24;
         }
@@ -1209,7 +1342,8 @@
 <div class="welcome-popup" id="welcomePopup">
     <div class="popup-card">
         <div class="popup-header">
-            <div class="logo-icon" style="margin: 0 auto 20px; width: 80px; height: 80px; font-size: 32px;">S</div>
+            <img src="images/logo1.png"
+                alt="ShikshaSupport logo">
             <h2>Welcome to ShikshaSupport!</h2>
             <p>Empowering Education</p>
         </div>
@@ -1403,7 +1537,7 @@
                     <input type="number" name="Experience" class="form-control" id="teacherExperience" required>
                 </div>
                 
-                <button type="submit" class="btn-primary">Register</button>
+                <button type="submit" class="btn-primary">Submit</button>
             </form>
         </div>
     </div>
@@ -1492,7 +1626,9 @@
 <nav class="navbar">
     <div class="container nav-flex">
         <div class="logo-container" onclick="showPage('home')">
-            <div class="logo-icon">S</div>
+            <div class="logo-image">
+                <span>S</span>
+            </div>
             <div class="logo-text">
                 <span class="logo-main">ShikshaSupport</span>
                 <span class="logo-tagline">Empowering Education</span>
@@ -1505,6 +1641,7 @@
             <a onclick="showPage('home'); closeMenu()" class="active">Home</a>
             <a onclick="showPage('about'); closeMenu()">About Us</a>
             <a onclick="showPage('enquiry'); closeMenu()">Enquiry</a>
+            <a onclick="showPage('payfees'); closeMenu()">Pay Fees</a>
             <a onclick="showPage('contact'); closeMenu()">Contact Us</a>
         </div>
     </div>
@@ -1517,7 +1654,7 @@
         <div class="slider-container" data-aos="fade-up">
             <div class="slider-wrapper" id="sliderWrapper">
                 <div class="slide">
-                    <img src="images/logo.png" alt="Students studying">
+                    <img src=images/logo.png" alt="Students studying">
                     <div class="slide-content">
                         <h2>Welcome to ShikshaSupport</h2>
                         <p>Empowering Education for a Brighter Future</p>
@@ -1736,6 +1873,79 @@
     </div>
 </div>
 
+<!-- ===== PAY FEES PAGE ===== -->
+<div id="payfees-page" class="page-section">
+    <div class="container payfees-page">
+        <div class="payfees-container" data-aos="fade-up">
+            <div class="payfees-header">
+                <h1>Pay Fees Online</h1>
+                <p style="color: #64748b;">Select your course fee and pay instantly</p>
+            </div>
+            
+            <div class="fee-options">
+                <div class="fee-option" onclick="selectFee('mathematics', 1000)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feeMath" value="1000">
+                        <span class="fee-name">Mathematics Course</span>
+                    </div>
+                    <span class="fee-amount">₹1,000</span>
+                </div>
+                
+                <div class="fee-option" onclick="selectFee('science', 1200)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feeScience" value="1200">
+                        <span class="fee-name">Science Course</span>
+                    </div>
+                    <span class="fee-amount">₹1,200</span>
+                </div>
+                
+                <div class="fee-option" onclick="selectFee('physics', 1500)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feePhysics" value="1500">
+                        <span class="fee-name">Physics Course</span>
+                    </div>
+                    <span class="fee-amount">₹1,500</span>
+                </div>
+                
+                <div class="fee-option" onclick="selectFee('chemistry', 1500)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feeChemistry" value="1500">
+                        <span class="fee-name">Chemistry Course</span>
+                    </div>
+                    <span class="fee-amount">₹1,500</span>
+                </div>
+                
+                <div class="fee-option" onclick="selectFee('biology', 1500)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feeBiology" value="1500">
+                        <span class="fee-name">Biology Course</span>
+                    </div>
+                    <span class="fee-amount">₹1,500</span>
+                </div>
+                
+                <div class="fee-option" onclick="selectFee('coding', 2000)">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <input type="radio" name="fee" id="feeCoding" value="2000">
+                        <span class="fee-name">Coding Course</span>
+                    </div>
+                    <span class="fee-amount">₹2,000</span>
+                </div>
+            </div>
+            
+            <div class="payfees-qr-section" id="payfeesQRSection">
+                <div class="payment-info">
+                    <p class="amount" id="selectedAmount">₹1,000</p>
+                    <p><i class="fas fa-building"></i> ShikshaSupport</p>
+                    <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
+                </div>
+                <div class="qr-code-box" id="feeQRCode"></div>
+                <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
+                <p style="font-size: 14px; color: #64748b;">After payment, please send screenshot to our WhatsApp</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ===== CONTACT PAGE ===== -->
 <div id="contact-page" class="page-section">
     <div class="container contact-page">
@@ -1752,7 +1962,9 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Address</h4>
-                        <p>123 Education Street, Andheri East, Mumbai - 400093</p>
+                        <a href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank" class="clickable-link">
+                            <p>Main Road, P5VX+QFP, Parvatiya Anchal, Block B, Sant Nagar, Burari, Delhi, 110084, India</p>
+                        </a>
                     </div>
                 </div>
                 
@@ -1760,8 +1972,12 @@
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Phone</h4>
-                        <p>+91 98765 43210</p>
-                        <p>+91 70506 24940</p>
+                        <a href="tel:+919876543210" class="clickable-link">
+                            <p>+91 98765 43210</p>
+                        </a>
+                        <a href="tel:+917050624940" class="clickable-link">
+                            <p>+91 70506 24940</p>
+                        </a>
                     </div>
                 </div>
                 
@@ -1769,8 +1985,12 @@
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>info@shikshasupport.com</p>
-                        <p>saurabhhkashyap302@gmail.com</p>
+                        <a href="mailto:info@shikshasupport.com" class="clickable-link">
+                            <p>info@shikshasupport.com</p>
+                        </a>
+                        <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
+                            <p>saurabhhkashyap302@gmail.com</p>
+                        </a>
                     </div>
                 </div>
                 
@@ -1823,9 +2043,21 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div><i class="fas fa-map-marker-alt"></i> Mumbai, India</div>
-            <div><i class="fas fa-phone"></i> +91 7050624940</div>
-            <div><i class="fas fa-envelope"></i> saurabhhkashyap302@gmail.com</div>
+            <div>
+                <a href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank" class="clickable-link">
+                    <i class="fas fa-map-marker-alt"></i> Main Road, Burari, Delhi
+                </a>
+            </div>
+            <div>
+                <a href="tel:+917050624940" class="clickable-link">
+                    <i class="fas fa-phone"></i> +91 7050624940
+                </a>
+            </div>
+            <div>
+                <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
+                    <i class="fas fa-envelope"></i> saurabhhkashyap302@gmail.com
+                </a>
+            </div>
         </div>
         <div class="copyright">
             <p>© 2026 ShikshaSupport (A unit of Jha Classes). All rights reserved.</p>
@@ -2109,6 +2341,41 @@
         document.getElementById('teacherSuccessPopup').classList.remove('active');
     }
 
+    // ===== PAY FEES PAGE =====
+    let selectedFeeAmount = 1000;
+
+    function selectFee(course, amount) {
+        selectedFeeAmount = amount;
+        
+        // Uncheck all radios
+        document.querySelectorAll('input[name="fee"]').forEach(radio => {
+            radio.checked = false;
+        });
+        
+        // Check selected radio
+        if (course === 'mathematics') document.getElementById('feeMath').checked = true;
+        else if (course === 'science') document.getElementById('feeScience').checked = true;
+        else if (course === 'physics') document.getElementById('feePhysics').checked = true;
+        else if (course === 'chemistry') document.getElementById('feeChemistry').checked = true;
+        else if (course === 'biology') document.getElementById('feeBiology').checked = true;
+        else if (course === 'coding') document.getElementById('feeCoding').checked = true;
+        
+        // Update amount
+        document.getElementById('selectedAmount').textContent = `₹${amount.toLocaleString()}`;
+        
+        // Show QR section
+        document.getElementById('payfeesQRSection').classList.add('active');
+        
+        // Generate QR code
+        const qrElement = document.getElementById('feeQRCode');
+        qrElement.innerHTML = '';
+        new QRCode(qrElement, {
+            text: `upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=${amount}&cu=INR`,
+            width: 200,
+            height: 200
+        });
+    }
+
     // ===== SLIDER =====
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -2166,7 +2433,8 @@
         if (page === 'home') navLinks[0].classList.add('active');
         else if (page === 'about') navLinks[1].classList.add('active');
         else if (page === 'enquiry') navLinks[2].classList.add('active');
-        else if (page === 'contact') navLinks[3].classList.add('active');
+        else if (page === 'payfees') navLinks[3].classList.add('active');
+        else if (page === 'contact') navLinks[4].classList.add('active');
         
         // Refresh AOS
         setTimeout(() => {
@@ -2207,6 +2475,7 @@
     window.toggleResumeRequired = toggleResumeRequired;
     window.submitTeacherTransaction = submitTeacherTransaction;
     window.closeTeacherSuccessPopup = closeTeacherSuccessPopup;
+    window.selectFee = selectFee;
     window.prevSlide = prevSlide;
     window.nextSlide = nextSlide;
     window.goToSlide = goToSlide;
