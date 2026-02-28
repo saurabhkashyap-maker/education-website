@@ -38,8 +38,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- QR Code Generator -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     
     <style>
         /* ===== CSS Variables ===== */
@@ -115,35 +113,21 @@
             flex-shrink: 0;
         }
 
-        .logo-image {
+        /* ===== LOGO SECTION - AAP IMAGE REPLACE KARENGE ===== */
+        .logo-icon {
             width: 50px;
             height: 50px;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(102,126,234,0.3);
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
         }
 
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-image img {
+        .logo-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .logo-image span {
-            color: white;
-            font-size: 28px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: block;
         }
 
         .logo-text {
@@ -164,11 +148,6 @@
             font-size: 10px;
             color: #64748b;
             letter-spacing: 0.5px;
-        }
-
-        /* Hidden file input for logo upload */
-        #logoUpload {
-            display: none;
         }
 
         /* ===== MOBILE MENU BUTTON ===== */
@@ -551,17 +530,6 @@
             overflow: hidden;
         }
 
-        .btn-outline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102,126,234,0.1), transparent);
-            transition: left 0.5s;
-        }
-
         .btn-outline:hover::before {
             left: 100%;
         }
@@ -630,35 +598,10 @@
             overflow: hidden;
         }
 
-        #qrcode, #feeQRCode {
-            width: 100%;
-            height: 100%;
-        }
-
-        #qrcode img, #feeQRCode img {
+        .qr-code-box img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-        }
-
-        .qr-upload {
-            margin: 20px 0;
-            padding: 20px;
-            border: 2px dashed var(--primary-color);
-            border-radius: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .qr-upload:hover {
-            background: #f0f4ff;
-        }
-
-        .qr-upload i {
-            font-size: 40px;
-            color: var(--primary-color);
-            margin-bottom: 10px;
         }
 
         .payment-info {
@@ -1350,15 +1293,50 @@
 
         .footer-content {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
             margin-bottom: 30px;
             position: relative;
             z-index: 1;
         }
 
-        .footer-content div {
+        .footer-location {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-location .main-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            font-size: 13px;
+        }
+
+        .footer-location .locality {
+            font-size: 12px;
+            color: var(--warning);
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            padding: 4px 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-contact div {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -1369,7 +1347,7 @@
             font-size: 13px;
         }
 
-        .footer-content a {
+        .footer-contact a {
             text-decoration: none;
             color: white;
             display: flex;
@@ -1377,11 +1355,11 @@
             gap: 8px;
         }
 
-        .footer-content a:hover {
+        .footer-contact a:hover {
             color: var(--warning);
         }
 
-        .footer-content i {
+        .footer-contact i {
             color: var(--warning);
         }
 
@@ -1506,13 +1484,8 @@
 <div class="welcome-popup" id="welcomePopup">
     <div class="popup-card">
         <div class="popup-header">
-            <div class="logo-image" id="popupLogo" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;
-                <div class="logo-icon">
-                
-                <span id="popupLogoText">
-                <img src="images/logo.png" alt="logo">
-                </span> 
-                <img id="popupLogoImg" src="image/logo.png" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            <div class="logo-icon" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;">
+                <img src="images/logo.png" alt="ShikshaSupport Logo">
             </div>
             <h2>Welcome to ShikshaSupport!</h2>
             <p>Empowering Education</p>
@@ -1535,9 +1508,6 @@
         </div>
     </div>
 </div>
-
-<!-- Hidden file input for logo upload -->
-<input type="file" id="logoUpload" accept="image/*" style="display: none;" onchange="handleLogoUpload(event)">
 
 <!-- ===== STUDENT REQUIREMENT POPUP ===== -->
 <div class="form-popup" id="studentRequirementPopup">
@@ -1781,8 +1751,9 @@
                     <p><i class="fas fa-building"></i> ShikshaSupport</p>
                     <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
                 </div>
-                <div class="qr-code-box" id="teacherQRCode">
-                    <!-- Dynamic QR will be generated here -->
+                <div class="qr-code-box">
+                    <!-- ===== QR CODE IMAGE - AAP YAHAN BADALENGE ===== -->
+                    <img src="images/qr-code.png" alt="Payment QR Code" id="teacherQRCode">
                 </div>
                 <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
                 <button class="btn-primary" onclick="showTeacherTransactionPopup()">I've Paid</button>
@@ -1852,9 +1823,8 @@
 <nav class="navbar">
     <div class="container nav-flex">
         <div class="logo-container" onclick="showPage('home')">
-            <div class="logo-image" id="navbarLogo" onclick="event.stopPropagation(); document.getElementById('logoUpload').click()">
-                <span id="navbarLogoText">S</span>
-                <img id="navbarLogoImg" src="" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            <div class="logo-icon">
+                <img src="images/logo.png" alt="ShikshaSupport Logo">
             </div>
             <div class="logo-text">
                 <span class="logo-main">ShikshaSupport</span>
@@ -1888,14 +1858,14 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/teacherslider2.jpeg" alt="Teacher teaching">
+                    <img src="images/slider1.jpeg" alt="Teacher teaching">
                     <div class="slide-content">
                         <h2>Expert Teachers</h2>
                         <p>Learn from the best educators in the country</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/slider1.jpeg" alt="Online learning">
+                    <img src="images/teacherslider.jpeg" alt="Online learning">
                     <div class="slide-content">
                         <h2>Online & Offline Classes</h2>
                         <p>Flexible learning options for every student</p>
@@ -2109,14 +2079,6 @@
                 <p style="color: #64748b;">Select your course fee and pay instantly</p>
             </div>
             
-            <!-- QR Upload Section for Admin -->
-            <div class="qr-upload" onclick="document.getElementById('qrUpload').click()">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <p>Click to upload your own QR code</p>
-                <p style="font-size: 12px; color: #64748b;">(Admins only - upload custom QR for fees)</p>
-            </div>
-            <input type="file" id="qrUpload" accept="image/*" style="display: none;" onchange="handleQRUpload(event)">
-            
             <div class="fee-options">
                 <div class="fee-option" onclick="selectFee('mathematics', 1000)">
                     <div style="display: flex; align-items: center; gap: 10px;">
@@ -2173,7 +2135,10 @@
                     <p><i class="fas fa-building"></i> ShikshaSupport</p>
                     <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
                 </div>
-                <div class="qr-code-box" id="feeQRCode"></div>
+                <div class="qr-code-box" id="feeQRCode">
+                    <!-- ===== QR CODE IMAGE - AAP YAHAN BADALENGE ===== -->
+                    <img src="images/qr-code.png" alt="Fee QR Code">
+                </div>
                 <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
                 <p style="font-size: 14px; color: #64748b;">After payment, please send screenshot to our WhatsApp</p>
             </div>
@@ -2278,20 +2243,27 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div>
-                <a href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank" class="clickable-link">
-                    <i class="fas fa-map-marker-alt"></i> Main Road, Burari, Delhi
-                </a>
+            <div class="footer-location">
+                <div class="main-location">
+                    <a href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank" class="clickable-link">
+                        <i class="fas fa-map-marker-alt"></i> Main Road, Burari, Delhi - 110084
+                    </a>
+                </div>
+                <div class="locality">
+                    <i class="fas fa-location-dot"></i> Locality: Sant Nagar, Burari
+                </div>
             </div>
-            <div>
-                <a href="tel:+917050624940" class="clickable-link">
-                    <i class="fas fa-phone"></i> +91 7050624940
-                </a>
-            </div>
-            <div>
-                <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
-                    <i class="fas fa-envelope"></i> saurabhhkashyap302@gmail.com
-                </a>
+            <div class="footer-contact">
+                <div>
+                    <a href="tel:+917050624940" class="clickable-link">
+                        <i class="fas fa-phone"></i> +91 70506 24940
+                    </a>
+                </div>
+                <div>
+                    <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
+                        <i class="fas fa-envelope"></i> saurabhhkashyap302@gmail.com
+                    </a>
+                </div>
             </div>
         </div>
         <div class="copyright">
@@ -2310,41 +2282,6 @@
         offset: 50
     });
 
-    // ===== LOGO UPLOAD FUNCTION =====
-    function handleLogoUpload(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                // Update navbar logo
-                document.getElementById('navbarLogoText').style.display = 'none';
-                document.getElementById('navbarLogoImg').style.display = 'block';
-                document.getElementById('navbarLogoImg').src = e.target.result;
-                
-                // Update popup logo
-                document.getElementById('popupLogoText').style.display = 'none';
-                document.getElementById('popupLogoImg').style.display = 'block';
-                document.getElementById('popupLogoImg').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-
-    // ===== QR UPLOAD FUNCTION =====
-    let uploadedQR = null;
-    
-    function handleQRUpload(event) {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                uploadedQR = e.target.result;
-                alert('QR code uploaded successfully! It will be used for fee payments.');
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-
     // ===== MOBILE MENU =====
     function toggleMenu() {
         const navLinks = document.getElementById('navLinks');
@@ -2359,19 +2296,6 @@
     // ===== WELCOME POPUP =====
     window.onload = function() {
         document.getElementById('welcomePopup').classList.remove('hidden');
-        
-        // Generate QR code for teacher payment
-        const teacherQR = document.getElementById('teacherQRCode');
-        if (teacherQR) {
-            new QRCode(teacherQR, {
-                text: 'upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=100&cu=INR',
-                width: 250,
-                height: 250
-            });
-        }
-        
-        // Set default teacher QR
-        uploadedQR = null;
     };
 
     function selectUserType(type) {
@@ -2393,7 +2317,7 @@
         const cityInput = document.getElementById('reqCity');
         
         if (pincode.length === 6) {
-            // Mock pincode database (in real app, use API)
+            // Mock pincode database
             const pincodeDB = {
                 '110084': 'Delhi',
                 '400001': 'Mumbai',
@@ -2408,7 +2332,7 @@
                 hintDiv.textContent = `City: ${pincodeDB[pincode]}`;
                 hintDiv.classList.add('show');
             } else {
-                hintDiv.textContent = 'Pincode not found in our database. Please enter city manually.';
+                hintDiv.textContent = 'Pincode not found. Please enter city manually.';
                 hintDiv.classList.add('show');
                 cityInput.readOnly = false;
                 cityInput.value = '';
@@ -2421,11 +2345,9 @@
 
     // ===== EDUCATION LEVEL =====
     function selectEducationLevel(level) {
-        // Update buttons
         document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
         
-        // Show corresponding class options
         document.querySelectorAll('.class-options').forEach(opt => opt.classList.remove('active'));
         
         if (level === 'primary') {
@@ -2478,7 +2400,6 @@
             return false;
         }
         
-        // Create form data for FormSubmit
         const formData = new FormData();
         formData.append('_subject', 'Student Requirement - ShikshaSupport');
         formData.append('Name', name);
@@ -2491,7 +2412,6 @@
         formData.append('Board', board);
         formData.append('Requirement Type', selectedRequirement);
         
-        // Send to FormSubmit
         fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
@@ -2523,12 +2443,10 @@
             return false;
         }
         
-        // Create form data for FormSubmit
         const formData = new FormData();
         formData.append('_subject', 'Student Subjects Selection - ShikshaSupport');
         formData.append('Subjects', subjects.join(', '));
         
-        // Send to FormSubmit
         fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
@@ -2569,12 +2487,10 @@
             return false;
         }
         
-        // Save teacher data temporarily
         localStorage.setItem('teacherData', JSON.stringify({
             name, email, phone, qualification, subject, experience
         }));
         
-        // Create form data for FormSubmit
         const formData = new FormData();
         formData.append('_subject', 'New Teacher Registration - ShikshaSupport');
         formData.append('Name', name);
@@ -2585,7 +2501,6 @@
         formData.append('Experience', experience);
         formData.append('Status', 'Pending Payment');
         
-        // Send to FormSubmit
         fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
@@ -2633,10 +2548,8 @@
             return false;
         }
         
-        // Get teacher data from localStorage
         const teacherData = JSON.parse(localStorage.getItem('teacherData') || '{}');
         
-        // Create form data for FormSubmit
         const formData = new FormData();
         formData.append('_subject', 'Teacher Payment Completed - ShikshaSupport');
         formData.append('Name', teacherData.name || '');
@@ -2657,7 +2570,6 @@
             formData.append('Resume Status', 'Not Provided');
         }
         
-        // Send to FormSubmit
         fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
@@ -2665,10 +2577,8 @@
         
         closeTeacherTransactionPopup();
         
-        // Clear stored data
         localStorage.removeItem('teacherData');
         
-        // Show success message
         document.getElementById('teacherSuccessPopup').classList.add('active');
         
         return false;
@@ -2684,12 +2594,10 @@
     function selectFee(course, amount) {
         selectedFeeAmount = amount;
         
-        // Uncheck all radios
         document.querySelectorAll('input[name="fee"]').forEach(radio => {
             radio.checked = false;
         });
         
-        // Check selected radio
         if (course === 'mathematics') document.getElementById('feeMath').checked = true;
         else if (course === 'science') document.getElementById('feeScience').checked = true;
         else if (course === 'physics') document.getElementById('feePhysics').checked = true;
@@ -2697,32 +2605,8 @@
         else if (course === 'biology') document.getElementById('feeBiology').checked = true;
         else if (course === 'coding') document.getElementById('feeCoding').checked = true;
         
-        // Update amount
         document.getElementById('selectedAmount').textContent = `₹${amount.toLocaleString()}`;
-        
-        // Show QR section
         document.getElementById('payfeesQRSection').classList.add('active');
-        
-        // Generate QR code or use uploaded QR
-        const qrElement = document.getElementById('feeQRCode');
-        qrElement.innerHTML = '';
-        
-        if (uploadedQR) {
-            // Use uploaded QR image
-            const img = document.createElement('img');
-            img.src = uploadedQR;
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'contain';
-            qrElement.appendChild(img);
-        } else {
-            // Generate default QR
-            new QRCode(qrElement, {
-                text: `upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=${amount}&cu=INR`,
-                width: 200,
-                height: 200
-            });
-        }
     }
 
     // ===== SLIDER =====
@@ -2731,7 +2615,6 @@
     const sliderWrapper = document.getElementById('sliderWrapper');
     const dotsContainer = document.getElementById('sliderDots');
 
-    // Create dots
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -2773,7 +2656,6 @@
         });
         document.getElementById(page + '-page').classList.add('active-section');
         
-        // Update active nav link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.classList.remove('active');
         });
@@ -2785,12 +2667,10 @@
         else if (page === 'payfees') navLinks[3].classList.add('active');
         else if (page === 'contact') navLinks[4].classList.add('active');
         
-        // Refresh AOS
         setTimeout(() => {
             AOS.refresh();
         }, 100);
         
-        // Close mobile menu after navigation
         closeMenu();
     }
 
@@ -2806,8 +2686,6 @@
     }
 
     // Make functions global
-    window.handleLogoUpload = handleLogoUpload;
-    window.handleQRUpload = handleQRUpload;
     window.toggleMenu = toggleMenu;
     window.closeMenu = closeMenu;
     window.selectUserType = selectUserType;
