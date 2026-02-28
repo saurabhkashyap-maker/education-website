@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>ShikshaSupport - Empowering Education</title>
+    
+    <!-- ===== SEO TAGS ===== -->
+    <title>ShikshaSupport - Best Online & Offline Tuition in Delhi | Jha Classes</title>
+    <meta name="description" content="ShikshaSupport (A unit of Jha Classes) provides quality education from Nursery to Class 12. Expert teachers for CBSE, ICSE, Bihar Board, UP Board & more. Online & offline classes available in Burari, Delhi.">
+    <meta name="keywords" content="tuition classes, online tuition, home tuition, Jha Classes, ShikshaSupport, best tuition in Delhi, CBSE coaching, ICSE coaching, Bihar Board coaching, nursery classes, primary education, secondary education, higher secondary education, Burari tuition">
+    <meta name="author" content="ShikshaSupport">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="ShikshaSupport - Best Online & Offline Tuition in Delhi">
+    <meta property="og:description" content="Quality education from Nursery to Class 12. Expert teachers for all boards.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.shikshasupport.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ShikshaSupport - Empowering Education">
+    <meta name="twitter:description" content="Quality education from Nursery to Class 12">
+    <meta name="twitter:image" content="images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.shikshasupport.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
@@ -12,7 +40,20 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- QR Code Generator -->
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    
     <style>
+        /* ===== CSS Variables ===== */
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --text-color: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #fbbf24;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +62,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
@@ -43,7 +84,7 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border-radius: 5px;
         }
 
@@ -80,10 +121,22 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(102,126,234,0.3);
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .logo-image span {
@@ -101,7 +154,7 @@
         .logo-main {
             font-size: 18px;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.2;
@@ -113,13 +166,18 @@
             letter-spacing: 0.5px;
         }
 
+        /* Hidden file input for logo upload */
+        #logoUpload {
+            display: none;
+        }
+
         /* ===== MOBILE MENU BUTTON ===== */
         .menu-toggle {
             display: none;
             background: none;
             border: none;
             font-size: 24px;
-            color: #667eea;
+            color: var(--primary-color);
             cursor: pointer;
             padding: 8px;
             border-radius: 8px;
@@ -139,7 +197,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #334155;
+            color: var(--text-color);
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s;
@@ -156,7 +214,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             transition: width 0.3s;
         }
 
@@ -195,7 +253,7 @@
                 width: 100%;
                 text-align: center;
                 padding: 12px;
-                background: #f8fafc;
+                background: var(--light-bg);
                 border-radius: 10px;
                 white-space: normal;
             }
@@ -266,7 +324,7 @@
         }
 
         .popup-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 40px 30px;
             color: white;
             text-align: center;
@@ -314,7 +372,7 @@
         }
 
         .user-type-btn {
-            background: #f8fafc;
+            background: var(--light-bg);
             border: 2px solid #e2e8f0;
             border-radius: 30px;
             padding: 20px;
@@ -346,7 +404,7 @@
         }
 
         .user-type-btn:hover {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             background: #f0f4ff;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102,126,234,0.2);
@@ -354,7 +412,7 @@
 
         .user-type-btn i {
             font-size: 24px;
-            color: #667eea;
+            color: var(--primary-color);
         }
 
         /* ===== FORM POPUPS ===== */
@@ -389,7 +447,7 @@
         }
 
         .form-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 25px;
             color: white;
             text-align: center;
@@ -412,11 +470,11 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
-            color: #334155;
+            color: var(--text-color);
         }
 
         .form-group label i {
-            color: #667eea;
+            color: var(--primary-color);
             margin-right: 8px;
         }
 
@@ -431,7 +489,7 @@
         }
 
         .form-control:focus {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             outline: none;
             box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
         }
@@ -445,7 +503,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             padding: 16px;
@@ -481,8 +539,8 @@
 
         .btn-outline {
             background: transparent;
-            border: 2px solid #667eea;
-            color: #667eea;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
             padding: 12px 25px;
             border-radius: 30px;
             font-weight: 600;
@@ -509,7 +567,7 @@
         }
 
         .btn-outline:hover {
-            background: #667eea;
+            background: var(--primary-color);
             color: white;
         }
 
@@ -567,42 +625,65 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        #qrcode {
-            width: 100%;
-            height: 100%;
-        }
-
-        #qrcode img {
-            width: 100%;
-            height: 100%;
+            border: 2px dashed var(--primary-color);
             border-radius: 20px;
+            overflow: hidden;
+        }
+
+        #qrcode, #feeQRCode {
+            width: 100%;
+            height: 100%;
+        }
+
+        #qrcode img, #feeQRCode img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-upload {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed var(--primary-color);
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .qr-upload:hover {
+            background: #f0f4ff;
+        }
+
+        .qr-upload i {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
         }
 
         .payment-info {
-            background: #f8fafc;
+            background: var(--light-bg);
             border-radius: 20px;
             padding: 15px;
             margin: 20px 0;
-            border: 2px dashed #667eea;
+            border: 2px dashed var(--primary-color);
         }
 
         .payment-info p {
             margin: 5px 0;
-            color: #334155;
+            color: var(--text-color);
         }
 
         .payment-info .amount {
             font-size: 24px;
             font-weight: 700;
-            color: #667eea;
+            color: var(--primary-color);
         }
 
         .resume-option {
             margin: 15px 0;
             padding: 15px;
-            background: #f8fafc;
+            background: var(--light-bg);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -612,12 +693,12 @@
         .resume-option input[type="checkbox"] {
             width: 20px;
             height: 20px;
-            accent-color: #667eea;
+            accent-color: var(--primary-color);
         }
 
         .resume-option label {
             font-weight: 500;
-            color: #334155;
+            color: var(--text-color);
         }
 
         /* ===== PAY FEES PAGE ===== */
@@ -641,7 +722,7 @@
 
         .payfees-header h1 {
             font-size: 32px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
@@ -655,7 +736,7 @@
         }
 
         .fee-option {
-            background: #f8fafc;
+            background: var(--light-bg);
             border: 2px solid #e2e8f0;
             border-radius: 30px;
             padding: 20px;
@@ -667,13 +748,13 @@
         }
 
         .fee-option:hover {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             background: #f0f4ff;
             transform: translateY(-2px);
         }
 
         .fee-option.selected {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             background: #f0f4ff;
         }
 
@@ -684,21 +765,21 @@
 
         .fee-option .fee-amount {
             font-weight: 700;
-            color: #667eea;
+            color: var(--primary-color);
             font-size: 18px;
         }
 
         .fee-option input[type="radio"] {
             width: 20px;
             height: 20px;
-            accent-color: #667eea;
+            accent-color: var(--primary-color);
             margin-right: 10px;
         }
 
         .payfees-qr-section {
             margin-top: 30px;
             padding: 30px;
-            background: linear-gradient(135deg, #f8fafc, #f0f4ff);
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
             border-radius: 30px;
             display: none;
         }
@@ -729,12 +810,12 @@
         }
 
         .clickable-link:hover {
-            color: #667eea;
+            color: var(--primary-color);
             transform: translateX(5px);
         }
 
         .clickable-link i {
-            color: #fbbf24;
+            color: var(--warning);
         }
 
         /* ===== SLIDER ===== */
@@ -812,7 +893,7 @@
             border-radius: 50%;
             font-size: 20px;
             cursor: pointer;
-            color: #667eea;
+            color: var(--primary-color);
             z-index: 10;
             transition: all 0.3s;
             display: flex;
@@ -822,7 +903,7 @@
         }
 
         .slider-btn:hover {
-            background: #667eea;
+            background: var(--primary-color);
             color: white;
             transform: translateY(-50%) scale(1.1);
         }
@@ -902,7 +983,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
 
         .section-box:hover {
@@ -920,7 +1001,7 @@
         }
 
         .section-box h2 i {
-            color: #667eea;
+            color: var(--primary-color);
         }
 
         .requirement-options {
@@ -931,7 +1012,7 @@
         }
 
         .req-option {
-            background: #f8fafc;
+            background: var(--light-bg);
             border: 2px solid #e2e8f0;
             border-radius: 25px;
             padding: 12px 15px;
@@ -943,19 +1024,19 @@
         }
 
         .req-option:hover {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             background: #f0f4ff;
         }
 
         .req-option.selected {
-            border-color: #667eea;
+            border-color: var(--primary-color);
             background: #f0f4ff;
         }
 
         .req-option input[type="radio"] {
             width: 18px;
             height: 18px;
-            accent-color: #667eea;
+            accent-color: var(--primary-color);
         }
 
         .req-option label {
@@ -966,7 +1047,7 @@
         }
 
         .submit-req {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             padding: 14px;
@@ -1011,7 +1092,7 @@
         }
 
         .vision-mission {
-            background: linear-gradient(135deg, #f8fafc, #f0f4ff);
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
             border-radius: 25px;
             padding: 20px;
             margin: 20px 0;
@@ -1019,7 +1100,7 @@
         }
 
         .vision-mission h3 {
-            color: #667eea;
+            color: var(--primary-color);
             margin-bottom: 8px;
             font-size: 16px;
             display: flex;
@@ -1033,7 +1114,7 @@
         }
 
         .read-more-link {
-            color: #667eea;
+            color: var(--primary-color);
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
@@ -1046,7 +1127,7 @@
         }
 
         .read-more-link:hover {
-            color: #764ba2;
+            color: var(--secondary-color);
             gap: 12px;
         }
 
@@ -1069,7 +1150,7 @@
             align-items: center;
             gap: 8px;
             padding: 10px;
-            background: #f8fafc;
+            background: var(--light-bg);
             border-radius: 15px;
             cursor: pointer;
             transition: all 0.3s;
@@ -1079,13 +1160,13 @@
 
         .subject-checkbox:hover {
             background: #f0f4ff;
-            border-color: #667eea;
+            border-color: var(--primary-color);
         }
 
         .subject-checkbox input[type="checkbox"] {
             width: 18px;
             height: 18px;
-            accent-color: #667eea;
+            accent-color: var(--primary-color);
         }
 
         /* ===== ABOUT PAGE ===== */
@@ -1100,7 +1181,7 @@
 
         .page-header h1 {
             font-size: 32px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
@@ -1128,7 +1209,7 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #f8fafc, #f0f4ff);
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
             border-radius: 20px;
             padding: 20px;
             text-align: center;
@@ -1143,7 +1224,7 @@
 
         .stat-card i {
             font-size: 30px;
-            color: #667eea;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
@@ -1189,7 +1270,7 @@
             gap: 15px;
             margin-bottom: 20px;
             padding: 12px;
-            background: #f8fafc;
+            background: var(--light-bg);
             border-radius: 15px;
             transition: all 0.3s;
         }
@@ -1207,7 +1288,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #667eea;
+            color: var(--primary-color);
             font-size: 18px;
         }
 
@@ -1297,11 +1378,11 @@
         }
 
         .footer-content a:hover {
-            color: #fbbf24;
+            color: var(--warning);
         }
 
         .footer-content i {
-            color: #fbbf24;
+            color: var(--warning);
         }
 
         .copyright {
@@ -1334,6 +1415,89 @@
                 transform: translateY(0);
             }
         }
+
+        /* ===== PINCODE AUTO-FILL ===== */
+        .pincode-hint {
+            font-size: 12px;
+            color: var(--primary-color);
+            margin-top: 5px;
+            display: none;
+        }
+
+        .pincode-hint.show {
+            display: block;
+        }
+
+        .locality-group {
+            margin-top: 10px;
+        }
+
+        /* ===== EDUCATION LEVELS ===== */
+        .education-level {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .level-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            background: var(--light-bg);
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 100px;
+        }
+
+        .level-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-color: transparent;
+        }
+
+        .level-btn:hover {
+            border-color: var(--primary-color);
+        }
+
+        .class-options {
+            display: none;
+        }
+
+        .class-options.active {
+            display: block;
+        }
+
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .class-btn {
+            padding: 10px;
+            border: 2px solid #e2e8f0;
+            background: var(--light-bg);
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .class-btn:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+        }
+
+        .class-btn.selected {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -1342,8 +1506,10 @@
 <div class="welcome-popup" id="welcomePopup">
     <div class="popup-card">
         <div class="popup-header">
-            <img src="images/logo1.png"
-                alt="ShikshaSupport logo">
+            <div class="logo-image" id="popupLogo" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;" onclick="document.getElementById('logoUpload').click()">
+                <span id="popupLogoText">S</span>
+                <img id="popupLogoImg" src="" style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            </div>
             <h2>Welcome to ShikshaSupport!</h2>
             <p>Empowering Education</p>
         </div>
@@ -1365,6 +1531,9 @@
         </div>
     </div>
 </div>
+
+<!-- Hidden file input for logo upload -->
+<input type="file" id="logoUpload" accept="image/*" style="display: none;" onchange="handleLogoUpload(event)">
 
 <!-- ===== STUDENT REQUIREMENT POPUP ===== -->
 <div class="form-popup" id="studentRequirementPopup">
@@ -1395,6 +1564,71 @@
                 </div>
                 
                 <div class="form-group">
+                    <label><i class="fas fa-location-dot"></i> Locality</label>
+                    <input type="text" name="Locality" class="form-control" id="reqLocality" placeholder="e.g., Sant Nagar, Burari" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-map-pin"></i> Pincode</label>
+                    <input type="text" name="Pincode" class="form-control" id="reqPincode" placeholder="Enter 6-digit pincode" maxlength="6" onblur="fetchCityFromPincode()" required>
+                    <div class="pincode-hint" id="pincodeHint"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-city"></i> City</label>
+                    <input type="text" name="City" class="form-control" id="reqCity" readonly placeholder="Auto-fills from pincode">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-school"></i> Education Level</label>
+                    <p style="font-size: 13px; color: #64748b; margin-bottom: 10px;">We teach from Nursery to Class 12 (Primary, Secondary, Higher Secondary)</p>
+                    
+                    <div class="education-level">
+                        <button type="button" class="level-btn active" onclick="selectEducationLevel('primary')">Primary</button>
+                        <button type="button" class="level-btn" onclick="selectEducationLevel('secondary')">Secondary</button>
+                        <button type="button" class="level-btn" onclick="selectEducationLevel('higher')">Higher Secondary</button>
+                    </div>
+                    
+                    <!-- Primary Classes (Nursery to Class 5) -->
+                    <div class="class-options active" id="primaryClasses">
+                        <label>Select Class:</label>
+                        <div class="class-grid">
+                            <div class="class-btn" onclick="selectClass('Nursery')">Nursery</div>
+                            <div class="class-btn" onclick="selectClass('LKG')">LKG</div>
+                            <div class="class-btn" onclick="selectClass('UKG')">UKG</div>
+                            <div class="class-btn" onclick="selectClass('Class 1')">Class 1</div>
+                            <div class="class-btn" onclick="selectClass('Class 2')">Class 2</div>
+                            <div class="class-btn" onclick="selectClass('Class 3')">Class 3</div>
+                            <div class="class-btn" onclick="selectClass('Class 4')">Class 4</div>
+                            <div class="class-btn" onclick="selectClass('Class 5')">Class 5</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Classes (Class 6 to 10) -->
+                    <div class="class-options" id="secondaryClasses">
+                        <label>Select Class:</label>
+                        <div class="class-grid">
+                            <div class="class-btn" onclick="selectClass('Class 6')">Class 6</div>
+                            <div class="class-btn" onclick="selectClass('Class 7')">Class 7</div>
+                            <div class="class-btn" onclick="selectClass('Class 8')">Class 8</div>
+                            <div class="class-btn" onclick="selectClass('Class 9')">Class 9</div>
+                            <div class="class-btn" onclick="selectClass('Class 10')">Class 10</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Higher Secondary Classes (Class 11 & 12) -->
+                    <div class="class-options" id="higherClasses">
+                        <label>Select Class:</label>
+                        <div class="class-grid">
+                            <div class="class-btn" onclick="selectClass('Class 11')">Class 11</div>
+                            <div class="class-btn" onclick="selectClass('Class 12')">Class 12</div>
+                        </div>
+                    </div>
+                    
+                    <input type="hidden" id="selectedClass" name="Class" value="Nursery">
+                </div>
+                
+                <div class="form-group">
                     <label><i class="fas fa-school"></i> Board</label>
                     <select name="Board" class="form-control" id="reqBoard" required>
                         <option value="">Select Board</option>
@@ -1405,20 +1639,6 @@
                         <option value="MP Board">MP Board</option>
                         <option value="Maharashtra Board">Maharashtra Board</option>
                         <option value="Other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label><i class="fas fa-graduation-cap"></i> Class</label>
-                    <select name="Class" class="form-control" id="reqClass" required>
-                        <option value="">Select Class</option>
-                        <option value="6">Class 6</option>
-                        <option value="7">Class 7</option>
-                        <option value="8">Class 8</option>
-                        <option value="9">Class 9</option>
-                        <option value="10">Class 10</option>
-                        <option value="11">Class 11</option>
-                        <option value="12">Class 12</option>
                     </select>
                 </div>
                 
@@ -1537,7 +1757,7 @@
                     <input type="number" name="Experience" class="form-control" id="teacherExperience" required>
                 </div>
                 
-                <button type="submit" class="btn-primary">Submit</button>
+                <button type="submit" class="btn-primary">Register & Pay ₹100</button>
             </form>
         </div>
     </div>
@@ -1557,7 +1777,9 @@
                     <p><i class="fas fa-building"></i> ShikshaSupport</p>
                     <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
                 </div>
-                <div class="qr-code-box" id="qrcode"></div>
+                <div class="qr-code-box" id="teacherQRCode">
+                    <!-- Dynamic QR will be generated here -->
+                </div>
                 <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
                 <button class="btn-primary" onclick="showTeacherTransactionPopup()">I've Paid</button>
             </div>
@@ -1626,8 +1848,9 @@
 <nav class="navbar">
     <div class="container nav-flex">
         <div class="logo-container" onclick="showPage('home')">
-            <div class="logo-image">
-                <span>S</span>
+            <div class="logo-image" id="navbarLogo" onclick="event.stopPropagation(); document.getElementById('logoUpload').click()">
+                <span id="navbarLogoText">S</span>
+                <img id="navbarLogoImg" src="" style="display: none; width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="logo-text">
                 <span class="logo-main">ShikshaSupport</span>
@@ -1654,7 +1877,7 @@
         <div class="slider-container" data-aos="fade-up">
             <div class="slider-wrapper" id="sliderWrapper">
                 <div class="slide">
-                    <img src=images/logo.png" alt="Students studying">
+                    <img src="images/logo.png" alt="Students studying">
                     <div class="slide-content">
                         <h2>Welcome to ShikshaSupport</h2>
                         <p>Empowering Education for a Brighter Future</p>
@@ -1882,6 +2105,14 @@
                 <p style="color: #64748b;">Select your course fee and pay instantly</p>
             </div>
             
+            <!-- QR Upload Section for Admin -->
+            <div class="qr-upload" onclick="document.getElementById('qrUpload').click()">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Click to upload your own QR code</p>
+                <p style="font-size: 12px; color: #64748b;">(Admins only - upload custom QR for fees)</p>
+            </div>
+            <input type="file" id="qrUpload" accept="image/*" style="display: none;" onchange="handleQRUpload(event)">
+            
             <div class="fee-options">
                 <div class="fee-option" onclick="selectFee('mathematics', 1000)">
                     <div style="display: flex; align-items: center; gap: 10px;">
@@ -2075,6 +2306,41 @@
         offset: 50
     });
 
+    // ===== LOGO UPLOAD FUNCTION =====
+    function handleLogoUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                // Update navbar logo
+                document.getElementById('navbarLogoText').style.display = 'none';
+                document.getElementById('navbarLogoImg').style.display = 'block';
+                document.getElementById('navbarLogoImg').src = e.target.result;
+                
+                // Update popup logo
+                document.getElementById('popupLogoText').style.display = 'none';
+                document.getElementById('popupLogoImg').style.display = 'block';
+                document.getElementById('popupLogoImg').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // ===== QR UPLOAD FUNCTION =====
+    let uploadedQR = null;
+    
+    function handleQRUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedQR = e.target.result;
+                alert('QR code uploaded successfully! It will be used for fee payments.');
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
     // ===== MOBILE MENU =====
     function toggleMenu() {
         const navLinks = document.getElementById('navLinks');
@@ -2090,14 +2356,18 @@
     window.onload = function() {
         document.getElementById('welcomePopup').classList.remove('hidden');
         
-        // Generate QR code for payment
-        if (document.getElementById('qrcode')) {
-            new QRCode(document.getElementById('qrcode'), {
+        // Generate QR code for teacher payment
+        const teacherQR = document.getElementById('teacherQRCode');
+        if (teacherQR) {
+            new QRCode(teacherQR, {
                 text: 'upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=100&cu=INR',
                 width: 250,
                 height: 250
             });
         }
+        
+        // Set default teacher QR
+        uploadedQR = null;
     };
 
     function selectUserType(type) {
@@ -2110,6 +2380,63 @@
         } else if (type === 'institution') {
             showPage('enquiry');
         }
+    }
+
+    // ===== PINCODE AUTO-FILL =====
+    function fetchCityFromPincode() {
+        const pincode = document.getElementById('reqPincode').value;
+        const hintDiv = document.getElementById('pincodeHint');
+        const cityInput = document.getElementById('reqCity');
+        
+        if (pincode.length === 6) {
+            // Mock pincode database (in real app, use API)
+            const pincodeDB = {
+                '110084': 'Delhi',
+                '400001': 'Mumbai',
+                '700001': 'Kolkata',
+                '600001': 'Chennai',
+                '500001': 'Hyderabad',
+                '560001': 'Bengaluru'
+            };
+            
+            if (pincodeDB[pincode]) {
+                cityInput.value = pincodeDB[pincode];
+                hintDiv.textContent = `City: ${pincodeDB[pincode]}`;
+                hintDiv.classList.add('show');
+            } else {
+                hintDiv.textContent = 'Pincode not found in our database. Please enter city manually.';
+                hintDiv.classList.add('show');
+                cityInput.readOnly = false;
+                cityInput.value = '';
+            }
+        } else {
+            hintDiv.classList.remove('show');
+            cityInput.readOnly = false;
+        }
+    }
+
+    // ===== EDUCATION LEVEL =====
+    function selectEducationLevel(level) {
+        // Update buttons
+        document.querySelectorAll('.level-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        // Show corresponding class options
+        document.querySelectorAll('.class-options').forEach(opt => opt.classList.remove('active'));
+        
+        if (level === 'primary') {
+            document.getElementById('primaryClasses').classList.add('active');
+        } else if (level === 'secondary') {
+            document.getElementById('secondaryClasses').classList.add('active');
+        } else if (level === 'higher') {
+            document.getElementById('higherClasses').classList.add('active');
+        }
+    }
+
+    function selectClass(className) {
+        document.querySelectorAll('.class-btn').forEach(btn => btn.classList.remove('selected'));
+        event.target.classList.add('selected');
+        document.getElementById('selectedClass').value = className;
     }
 
     // ===== STUDENT FLOW =====
@@ -2136,10 +2463,13 @@
         const name = document.getElementById('reqName').value;
         const phone = document.getElementById('reqPhone').value;
         const address = document.getElementById('reqAddress').value;
+        const locality = document.getElementById('reqLocality').value;
+        const pincode = document.getElementById('reqPincode').value;
+        const city = document.getElementById('reqCity').value;
+        const selectedClass = document.getElementById('selectedClass').value;
         const board = document.getElementById('reqBoard').value;
-        const studentClass = document.getElementById('reqClass').value;
         
-        if (!name || !phone || !address || !board || !studentClass) {
+        if (!name || !phone || !address || !locality || !pincode || !city || !selectedClass || !board) {
             alert('Please fill all fields');
             return false;
         }
@@ -2150,8 +2480,11 @@
         formData.append('Name', name);
         formData.append('Phone', phone);
         formData.append('Address', address);
+        formData.append('Locality', locality);
+        formData.append('Pincode', pincode);
+        formData.append('City', city);
+        formData.append('Class', selectedClass);
         formData.append('Board', board);
-        formData.append('Class', studentClass);
         formData.append('Requirement Type', selectedRequirement);
         
         // Send to FormSubmit
@@ -2366,14 +2699,26 @@
         // Show QR section
         document.getElementById('payfeesQRSection').classList.add('active');
         
-        // Generate QR code
+        // Generate QR code or use uploaded QR
         const qrElement = document.getElementById('feeQRCode');
         qrElement.innerHTML = '';
-        new QRCode(qrElement, {
-            text: `upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=${amount}&cu=INR`,
-            width: 200,
-            height: 200
-        });
+        
+        if (uploadedQR) {
+            // Use uploaded QR image
+            const img = document.createElement('img');
+            img.src = uploadedQR;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'contain';
+            qrElement.appendChild(img);
+        } else {
+            // Generate default QR
+            new QRCode(qrElement, {
+                text: `upi://pay?pa=shikshasupport@okhdfcbank&pn=ShikshaSupport&am=${amount}&cu=INR`,
+                width: 200,
+                height: 200
+            });
+        }
     }
 
     // ===== SLIDER =====
@@ -2457,6 +2802,8 @@
     }
 
     // Make functions global
+    window.handleLogoUpload = handleLogoUpload;
+    window.handleQRUpload = handleQRUpload;
     window.toggleMenu = toggleMenu;
     window.closeMenu = closeMenu;
     window.selectUserType = selectUserType;
@@ -2482,6 +2829,9 @@
     window.showPage = showPage;
     window.validateEnquiry = validateEnquiry;
     window.validateContact = validateContact;
+    window.fetchCityFromPincode = fetchCityFromPincode;
+    window.selectEducationLevel = selectEducationLevel;
+    window.selectClass = selectClass;
 </script>
 </body>
 </html>
