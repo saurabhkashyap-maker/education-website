@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     
     <!-- ===== SEO TAGS ===== -->
-    <title>Best Home Tuition in Delhi | Online & Offline Tutors – ShikshaSupport</title>
-    <meta name="description" content="ShikshaSupport provides the best home tuition and online classes in Delhi for Nursery to Class 12. Expert tutors, affordable fees, and result-oriented learning.">
-    <meta name="keywords" content="tuition classes, online tuition, home tuition, Jha Classes, ShikshaSupport, best tuition in Delhi, CBSE coaching, ICSE coaching, Bihar Board coaching, nursery classes, primary education, secondary education, higher secondary education, Burari tuition">
+    <title>ShikshaSupport - Best Online & Offline Tuition in Delhi | Jha Classes</title>
+    <meta name="description" content="Shiksha Support offers trusted home tuition, online classes and admission assistance in Delhi NCR and across India. Expert tutors from Nursery to Class 12 and competitive exams for CBSE, ICSE and all boards.">
+    <meta name="keywords" content="home tuition in Delhi NCR, online classes in India, admission assistance Delhi, nursery to class 12 tuition, CBSE tuition, ICSE tuition, state board tuition, competitive exam coaching, private tutor Delhi, home tutor near me, Shiksha Support">
     <meta name="author" content="ShikshaSupport">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -16,7 +16,7 @@
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="ShikshaSupport - Best Online & Offline Tuition in Delhi">
     <meta property="og:description" content="Quality education from Nursery to Class 12. Expert teachers for all boards.">
-    <meta property="og:image" content="images/twitter-image.jpg">
+    <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:url" content="https://www.shikshasupport.com">
     <meta property="og:type" content="website">
     
@@ -30,19 +30,7 @@
     <link rel="canonical" href="https://www.shikshasupport.com">
     
     <!-- Favicon -->
-<link rel="icon" href="/favicon.png" sizes="any">
-<link rel="shortcut icon" href="/favicon.png">
-    
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "ShikshaSupport",
-  "url": "https://www.shikshasupport.com",
-  "logo": "https://www.shikshasupport.com/images/logo.png",
-  "description": "Best Online & Offline Tuition in Delhi. Quality education from Nursery to Class 12."
-}
-    </script>
+    <link rel="icon" type="image/png" href="favicon.png">
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -125,7 +113,6 @@
             flex-shrink: 0;
         }
 
-        /* ===== LOGO SECTION - AAP IMAGE REPLACE KARENGE ===== */
         .logo-icon {
             width: 50px;
             height: 50px;
@@ -406,6 +393,58 @@
             color: var(--primary-color);
         }
 
+        /* ===== INTERESTED POPUP ===== */
+        .interested-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10001;
+        }
+
+        .interested-popup.active {
+            display: flex;
+        }
+
+        .interest-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .interest-btn {
+            background: var(--light-bg);
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 25px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .interest-btn:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+        }
+
+        .interest-btn i {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
         /* ===== FORM POPUPS ===== */
         .form-popup {
             position: fixed;
@@ -418,7 +457,7 @@
             display: none;
             align-items: center;
             justify-content: center;
-            z-index: 10001;
+            z-index: 10002;
         }
 
         .form-popup.active {
@@ -542,10 +581,6 @@
             overflow: hidden;
         }
 
-        .btn-outline:hover::before {
-            left: 100%;
-        }
-
         .btn-outline:hover {
             background: var(--primary-color);
             color: white;
@@ -586,7 +621,7 @@
             display: none;
             align-items: center;
             justify-content: center;
-            z-index: 10002;
+            z-index: 10003;
         }
 
         .teacher-reg-popup.active {
@@ -654,6 +689,25 @@
         .resume-option label {
             font-weight: 500;
             color: var(--text-color);
+        }
+
+        .file-upload {
+            border: 2px dashed var(--primary-color);
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .file-upload:hover {
+            background: #f0f4ff;
+        }
+
+        .file-upload i {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
         }
 
         /* ===== PAY FEES PAGE ===== */
@@ -818,7 +872,8 @@
             z-index: 2;
             width: 90%;
             max-width: 600px;
-            background: rgba(0,0,0,0.25);
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
             padding: 30px 20px;
             border-radius: 40px;
             border: 1px solid rgba(255,255,255,0.2);
@@ -828,7 +883,7 @@
             font-size: 32px;
             font-weight: 800;
             margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .slide-content p {
@@ -1281,6 +1336,37 @@
             box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
         }
 
+        /* ===== ADMISSION ASSISTANCE PAGE ===== */
+        .admission-page {
+            padding: 40px 0;
+        }
+
+        .admission-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+        }
+
+        .admission-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admission-header h1 {
+            font-size: 32px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .admission-form {
+            margin-top: 30px;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background: #1e1b4b;
@@ -1498,24 +1584,49 @@
             <div class="logo-icon" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;">
                 <img src="images/logo.png" alt="ShikshaSupport Logo">
             </div>
-            <h2>Best Home Tuition & Online Classes in Delhi</h2>
-            <p>ShikshaSupport provides trusted home tutors in Delhi for Nursery to Class 12. We offer personalized home tuition and online classes with expert teachers at affordable fees.</p>
+            <h1>Welcome to ShikshaSupport!</h1>
+            <p>Shiksha Support offers Home Tuition, Online Classes and Admission Assistance in Delhi NCR and across India. Expert tutors available from Nursery to Class 12 and for competitive exams of all boards.</p>
         </div>
         <div class="popup-body">
             <div class="user-type-options">
                 <div class="user-type-btn" onclick="selectUserType('student')">
                     <i class="fas fa-user-graduate"></i>
-                    <span>I am a Student</span>
+                    <span>Student</span>
                 </div>
-                <div class="user-type-btn" onclick="selectUserType('teacher')">
+                <div class="user-type-btn" onclick="selectUserType('faculty')">
                     <i class="fas fa-chalkboard-teacher"></i>
-                    <span>I am a Teacher</span>
+                    <span>Faculty</span>
                 </div>
                 <div class="user-type-btn" onclick="selectUserType('institution')">
                     <i class="fas fa-building"></i>
-                    <span>We are an Institution</span>
+                    <span>Institution</span>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== INTERESTED POPUP ===== -->
+<div class="interested-popup" id="interestedPopup">
+    <div class="popup-card">
+        <div class="popup-header">
+            <h2><i class="fas fa-question-circle"></i> Interested In</h2>
+            <p>What would you like to know more about?</p>
+        </div>
+        <div class="popup-body">
+            <div class="interest-options">
+                <div class="interest-btn" onclick="selectInterest('tuition')">
+                    <i class="fas fa-book-open"></i>
+                    Tuition Support
+                </div>
+                <div class="interest-btn" onclick="selectInterest('admission')">
+                    <i class="fas fa-graduation-cap"></i>
+                    Admission Assistance
+                </div>
+            </div>
+            <button class="btn-outline" onclick="closeInterestedPopup()" style="margin-top: 20px;">
+                <i class="fas fa-times"></i> Cancel
+            </button>
         </div>
     </div>
 </div>
@@ -1691,42 +1802,42 @@
     </div>
 </div>
 
-<!-- ===== TEACHER REGISTRATION POPUP ===== -->
-<div class="teacher-reg-popup" id="teacherRegistrationPopup">
+<!-- ===== FACULTY REGISTRATION POPUP ===== -->
+<div class="teacher-reg-popup" id="facultyRegistrationPopup">
     <div class="form-card">
-        <div class="close-btn" onclick="closeTeacherRegistrationPopup()">&times;</div>
+        <div class="close-btn" onclick="closeFacultyRegistrationPopup()">&times;</div>
         <div class="form-header">
-            <h3><i class="fas fa-chalkboard-teacher"></i> Teacher Registration</h3>
+            <h3><i class="fas fa-chalkboard-teacher"></i> Faculty Registration</h3>
         </div>
         <div class="form-body">
-            <form id="teacherRegistrationForm" onsubmit="submitTeacherRegistration(event)">
-                <input type="hidden" name="_subject" value="New Teacher Registration - ShikshaSupport">
+            <form id="facultyRegistrationForm" onsubmit="submitFacultyRegistration(event)">
+                <input type="hidden" name="_subject" value="New Faculty Registration - ShikshaSupport">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 
                 <div class="form-group">
                     <label><i class="fas fa-user"></i> Full Name</label>
-                    <input type="text" name="Full Name" class="form-control" id="teacherName" required>
+                    <input type="text" name="Full Name" class="form-control" id="facultyName" required>
                 </div>
                 
                 <div class="form-group">
                     <label><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" name="Email" class="form-control" id="teacherEmail" required>
+                    <input type="email" name="Email" class="form-control" id="facultyEmail" required>
                 </div>
                 
                 <div class="form-group">
                     <label><i class="fas fa-phone"></i> Phone Number</label>
-                    <input type="tel" name="Phone" class="form-control" id="teacherPhone" required>
+                    <input type="tel" name="Phone" class="form-control" id="facultyPhone" required>
                 </div>
                 
                 <div class="form-group">
                     <label><i class="fas fa-graduation-cap"></i> Qualification</label>
-                    <input type="text" name="Qualification" class="form-control" id="teacherQualification" placeholder="e.g., M.Sc, B.Ed" required>
+                    <input type="text" name="Qualification" class="form-control" id="facultyQualification" placeholder="e.g., M.Sc, B.Ed" required>
                 </div>
                 
                 <div class="form-group">
                     <label><i class="fas fa-chalkboard"></i> Subject Expertise</label>
-                    <select name="Subject" class="form-control" id="teacherSubject" required>
+                    <select name="Subject" class="form-control" id="facultySubject" required>
                         <option value="">Select Subject</option>
                         <option value="Mathematics">Mathematics</option>
                         <option value="Physics">Physics</option>
@@ -1739,83 +1850,19 @@
                 
                 <div class="form-group">
                     <label><i class="fas fa-briefcase"></i> Experience (Years)</label>
-                    <input type="number" name="Experience" class="form-control" id="teacherExperience" required>
+                    <input type="number" name="Experience" class="form-control" id="facultyExperience" required>
                 </div>
                 
-                <button type="submit" class="btn-primary">Submit</button>
+                <button type="submit" class="btn-primary">Register</button>
             </form>
         </div>
     </div>
 </div>
 
-<!-- ===== TEACHER PAYMENT QR POPUP ===== -->
-<div class="teacher-reg-popup" id="teacherPaymentPopup">
+<!-- ===== FACULTY SUCCESS POPUP ===== -->
+<div class="teacher-reg-popup" id="facultySuccessPopup">
     <div class="form-card">
-        <div class="close-btn" onclick="closeTeacherPaymentPopup()">&times;</div>
-        <div class="form-header">
-            <h3><i class="fas fa-qrcode"></i> Registration Fee - ₹100</h3>
-        </div>
-        <div class="form-body">
-            <div class="qr-section">
-                <div class="payment-info">
-                    <p class="amount">₹100</p>
-                    <p><i class="fas fa-building"></i> ShikshaSupport</p>
-                    <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
-                </div>
-                <div class="qr-code-box">
-                    <!-- ===== QR CODE IMAGE - AAP YAHAN BADALENGE ===== -->
-                    <img src="images/qr-code.png" alt="Payment QR Code" id="teacherQRCode">
-                </div>
-                <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
-                <button class="btn-primary" onclick="showTeacherTransactionPopup()">I've Paid</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== TEACHER TRANSACTION & RESUME POPUP ===== -->
-<div class="teacher-reg-popup" id="teacherTransactionPopup">
-    <div class="form-card">
-        <div class="close-btn" onclick="closeTeacherTransactionPopup()">&times;</div>
-        <div class="form-header">
-            <h3><i class="fas fa-receipt"></i> Payment Details</h3>
-        </div>
-        <div class="form-body">
-            <form id="teacherTransactionForm" onsubmit="submitTeacherTransaction(event)">
-                <input type="hidden" name="_subject" value="Teacher Payment Completed - ShikshaSupport">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                
-                <div class="form-group">
-                    <label><i class="fas fa-hashtag"></i> Transaction ID</label>
-                    <input type="text" name="Transaction ID" class="form-control" id="transactionId" placeholder="Enter UPI transaction ID" required>
-                </div>
-                
-                <div class="form-group">
-                    <label><i class="fas fa-file-pdf"></i> Upload Resume (Optional)</label>
-                    <div class="file-upload" onclick="document.getElementById('resumeFile').click()" style="border: 2px dashed #667eea; border-radius: 30px; padding: 20px; text-align: center; cursor: pointer;">
-                        <i class="fas fa-cloud-upload-alt" style="font-size: 30px; color: #667eea; margin-bottom: 10px;"></i>
-                        <p>Click to upload your resume (PDF)</p>
-                        <p style="font-size: 12px; color: #64748b;">Max size: 5MB</p>
-                    </div>
-                    <input type="file" id="resumeFile" accept=".pdf" style="display: none;">
-                </div>
-                
-                <div class="resume-option">
-                    <input type="checkbox" id="noResume" onchange="toggleResumeRequired()">
-                    <label for="noResume">I don't have a resume right now</label>
-                </div>
-                
-                <button type="submit" class="btn-primary">Submit & Complete Registration</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- ===== TEACHER SUCCESS POPUP ===== -->
-<div class="teacher-reg-popup" id="teacherSuccessPopup">
-    <div class="form-card">
-        <div class="close-btn" onclick="closeTeacherSuccessPopup()">&times;</div>
+        <div class="close-btn" onclick="closeFacultySuccessPopup()">&times;</div>
         <div class="form-header">
             <h3><i class="fas fa-check-circle"></i> Thank You!</h3>
         </div>
@@ -1824,7 +1871,7 @@
                 <i class="fas fa-check-circle" style="font-size: 60px; color: #10b981; margin-bottom: 15px;"></i>
                 <h2 style="color: #1e293b; margin-bottom: 10px; font-size: 24px;">Registration Successful!</h2>
                 <p style="color: #64748b; margin-bottom: 25px;">Thank you for joining ShikshaSupport. We will review your application and reach out to you shortly.</p>
-                <button class="btn-primary" onclick="closeTeacherSuccessPopup()" style="width: auto; padding: 12px 30px;">Continue</button>
+                <button class="btn-primary" onclick="closeFacultySuccessPopup()" style="width: auto; padding: 12px 30px;">Continue</button>
             </div>
         </div>
     </div>
@@ -1849,7 +1896,7 @@
             <a onclick="showPage('home'); closeMenu()" class="active">Home</a>
             <a onclick="showPage('about'); closeMenu()">About Us</a>
             <a onclick="showPage('enquiry'); closeMenu()">Enquiry</a>
-            <a onclick="showPage('payfees'); closeMenu()">Pay Fees</a>
+            <a onclick="showPage('admission'); closeMenu()">Admission Assistance</a>
             <a onclick="showPage('contact'); closeMenu()">Contact Us</a>
         </div>
     </div>
@@ -1864,19 +1911,19 @@
                 <div class="slide">
                     <img src="images/sikshalogo.png" alt="Students studying">
                     <div class="slide-content">
-                        <h1>Best Home Tution & Online Classes in Delhi - Expert Online & Offline Tutors</h1>
+                        <h2>Welcome to ShikshaSupport</h2>
                         <p>Empowering Education for a Brighter Future</p>
                     </div>
                 </div>
                 <div class="slide">
                     <img src="images/slider1.jpeg" alt="Teacher teaching">
                     <div class="slide-content">
-                        <h2>Expert Teachers</h2>
+                        <h2>Expert Faculty</h2>
                         <p>Learn from the best educators in the country</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="images/teacherslider2.jpeg" alt="Online learning">
+                    <img src="inages/teacherslider2.jpeg" alt="Online learning">
                     <div class="slide-content">
                         <h2>Online & Offline Classes</h2>
                         <p>Flexible learning options for every student</p>
@@ -1956,7 +2003,7 @@
                 <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fas fa-chalkboard-teacher"></i>
                     <div class="number">500+</div>
-                    <div class="label">Expert Teachers</div>
+                    <div class="label">Expert Faculty</div>
                 </div>
                 <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fas fa-video"></i>
@@ -1972,13 +2019,13 @@
             
             <h2 style="margin: 30px 0 15px;">Our Story</h2>
             <p>ShikshaSupport, a unit of Jha Classes, was founded in 2020 with a simple yet powerful vision - to make quality education accessible to every student in India. What started as a small initiative by a group of passionate educators has now grown into a comprehensive learning platform serving thousands of students across the country.</p>
-            <p>The name "ShikshaSupport" combines two Hindi words - "Shiksha" (education) and "Support" - reflecting our commitment to supporting students in their educational journey. We truly believe in building bridges between students and quality education, between learners and expert teachers, between dreams and achievements.</p>
+            <p>The name "ShikshaSupport" combines two Hindi words - "Shiksha" (education) and "Support" - reflecting our commitment to supporting students in their educational journey. We truly believe in building bridges between students and quality education, between learners and expert faculty, between dreams and achievements.</p>
             
             <h2 style="margin: 30px 0 15px;">Our Vision</h2>
             <p>To create a world where every student has access to personalized, quality education regardless of their location or background. We envision a future where learning is not confined by geographical boundaries but is a seamless, engaging experience available to all.</p>
             
             <h2 style="margin: 30px 0 15px;">Our Mission</h2>
-            <p>To empower students with the right guidance, resources, and support to achieve their academic goals through innovative teaching methods. We strive to provide personalized learning experiences, connect students with highly qualified educators, leverage technology for interactive learning, and create a supportive community of learners and teachers.</p>
+            <p>To empower students with the right guidance, resources, and support to achieve their academic goals through innovative teaching methods. We strive to provide personalized learning experiences, connect students with highly qualified educators, leverage technology for interactive learning, and create a supportive community of learners and faculty.</p>
         </div>
     </div>
 </div>
@@ -1993,7 +2040,7 @@
         
         <div class="enquiry-grid">
             <div class="enquiry-form" data-aos="fade-right">
-                <form action="https://formsubmit.co/rubyjhaclass@gmail.com" method="POST" onsubmit="return validateEnquiry()">
+                <form action="https://formsubmit.co/saurabhhkashyap302@gmail.com" method="POST" onsubmit="return validateEnquiry()">
                     <input type="hidden" name="_subject" value="New Enquiry - ShikshaSupport">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
@@ -2018,7 +2065,7 @@
                         <select name="Enquiry Type" class="form-control" required>
                             <option value="">Select Type</option>
                             <option value="Student">Student Enquiry</option>
-                            <option value="Teacher">Teacher Enquiry</option>
+                            <option value="Faculty">Faculty Enquiry</option>
                             <option value="Institution">Institution Enquiry</option>
                             <option value="Partnership">Partnership</option>
                             <option value="Other">Other</option>
@@ -2040,7 +2087,7 @@
                 <div class="info-item">
                     <i class="fas fa-check-circle"></i>
                     <div>
-                        <h4>Expert Teachers</h4>
+                        <h4>Expert Faculty</h4>
                         <p>Learn from highly qualified and experienced educators</p>
                     </div>
                 </div>
@@ -2081,77 +2128,91 @@
     </div>
 </div>
 
-<!-- ===== PAY FEES PAGE ===== -->
-<div id="payfees-page" class="page-section">
-    <div class="container payfees-page">
-        <div class="payfees-container" data-aos="fade-up">
-            <div class="payfees-header">
-                <h1>Pay Fees Online</h1>
-                <p style="color: #64748b;">Select your course fee and pay instantly</p>
+<!-- ===== ADMISSION ASSISTANCE PAGE ===== -->
+<div id="admission-page" class="page-section">
+    <div class="container admission-page">
+        <div class="admission-container" data-aos="fade-up">
+            <div class="admission-header">
+                <h1><i class="fas fa-graduation-cap"></i> Admission Assistance</h1>
+                <p style="color: #64748b;">Get help with school and college admissions</p>
             </div>
             
-            <div class="fee-options">
-                <div class="fee-option" onclick="selectFee('mathematics', 1000)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feeMath" value="1000">
-                        <span class="fee-name">Mathematics Course</span>
+            <div class="admission-form">
+                <form action="https://formsubmit.co/saurabhhkashyap302@gmail.com" method="POST" onsubmit="return validateAdmission()">
+                    <input type="hidden" name="_subject" value="New Admission Assistance Request - ShikshaSupport">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Student Name</label>
+                        <input type="text" name="Student Name" class="form-control" required>
                     </div>
-                    <span class="fee-amount">₹1,000</span>
-                </div>
-                
-                <div class="fee-option" onclick="selectFee('science', 1200)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feeScience" value="1200">
-                        <span class="fee-name">Science Course</span>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-calendar"></i> Date of Birth</label>
+                        <input type="date" name="Date of Birth" class="form-control" required>
                     </div>
-                    <span class="fee-amount">₹1,200</span>
-                </div>
-                
-                <div class="fee-option" onclick="selectFee('physics', 1500)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feePhysics" value="1500">
-                        <span class="fee-name">Physics Course</span>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Current Class/Grade</label>
+                        <select name="Current Class" class="form-control" required>
+                            <option value="">Select Current Class</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="LKG">LKG</option>
+                            <option value="UKG">UKG</option>
+                            <option value="Class 1">Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            <option value="Class 4">Class 4</option>
+                            <option value="Class 5">Class 5</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                        </select>
                     </div>
-                    <span class="fee-amount">₹1,500</span>
-                </div>
-                
-                <div class="fee-option" onclick="selectFee('chemistry', 1500)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feeChemistry" value="1500">
-                        <span class="fee-name">Chemistry Course</span>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-school"></i> Admission Seeking For</label>
+                        <select name="Admission For" class="form-control" required>
+                            <option value="">Select Level</option>
+                            <option value="Primary School">Primary School (Nursery - Class 5)</option>
+                            <option value="Secondary School">Secondary School (Class 6 - 10)</option>
+                            <option value="Higher Secondary">Higher Secondary (Class 11 - 12)</option>
+                            <option value="College">College/University</option>
+                        </select>
                     </div>
-                    <span class="fee-amount">₹1,500</span>
-                </div>
-                
-                <div class="fee-option" onclick="selectFee('biology', 1500)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feeBiology" value="1500">
-                        <span class="fee-name">Biology Course</span>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Parent's Contact</label>
+                        <input type="tel" name="Parent Contact" class="form-control" required>
                     </div>
-                    <span class="fee-amount">₹1,500</span>
-                </div>
-                
-                <div class="fee-option" onclick="selectFee('coding', 2000)">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <input type="radio" name="fee" id="feeCoding" value="2000">
-                        <span class="fee-name">Coding Course</span>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" name="Email" class="form-control" required>
                     </div>
-                    <span class="fee-amount">₹2,000</span>
-                </div>
-            </div>
-            
-            <div class="payfees-qr-section" id="payfeesQRSection">
-                <div class="payment-info">
-                    <p class="amount" id="selectedAmount">₹1,000</p>
-                    <p><i class="fas fa-building"></i> ShikshaSupport</p>
-                    <p><i class="fas fa-qrcode"></i> Scan QR to pay</p>
-                </div>
-                <div class="qr-code-box" id="feeQRCode">
-                    <!-- ===== QR CODE IMAGE - AAP YAHAN BADALENGE ===== -->
-                    <img src="images/qr-code.png" alt="Fee QR Code">
-                </div>
-                <p style="margin: 20px 0; color: #667eea;">UPI ID: shikshasupport@okhdfcbank</p>
-                <p style="font-size: 14px; color: #64748b;">After payment, please send screenshot to our WhatsApp</p>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Address</label>
+                        <textarea name="Address" class="form-control" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Preferred Schools/Colleges (if any)</label>
+                        <textarea name="Preferred Institutions" class="form-control" rows="2" placeholder="List any specific schools or colleges you're interested in"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-info-circle"></i> Additional Information</label>
+                        <textarea name="Additional Info" class="form-control" rows="3" placeholder="Any specific requirements or questions"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Submit Request</button>
+                </form>
             </div>
         </div>
     </div>
@@ -2186,8 +2247,8 @@
                         <a href="tel:+919876543210" class="clickable-link">
                             <p>+91 98765 43210</p>
                         </a>
-                        <a href="tel:+919311036210" class="clickable-link">
-                            <p>+91 9311036210</p>
+                        <a href="tel:+917050624940" class="clickable-link">
+                            <p>+91 70506 24940</p>
                         </a>
                     </div>
                 </div>
@@ -2199,8 +2260,8 @@
                         <a href="mailto:info@shikshasupport.com" class="clickable-link">
                             <p>info@shikshasupport.com</p>
                         </a>
-                        <a href="mailto:rubyjhaclass@gmail.com" class="clickable-link">
-                            <p>rubyjhaclass@gmail.com</p>
+                        <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
+                            <p>saurabhhkashyap302@gmail.com</p>
                         </a>
                     </div>
                 </div>
@@ -2218,7 +2279,7 @@
             <div class="contact-form" data-aos="fade-left">
                 <h3 style="margin-bottom: 30px;">Send us a Message</h3>
                 
-                <form action="https://formsubmit.co/rubyjhaclass@gmail.com" method="POST" onsubmit="return validateContact()">
+                <form action="https://formsubmit.co/saurabhhkashyap302@gmail.com" method="POST" onsubmit="return validateContact()">
                     <input type="hidden" name="_subject" value="New Contact Message - ShikshaSupport">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
@@ -2266,13 +2327,13 @@
             </div>
             <div class="footer-contact">
                 <div>
-                    <a href="tel:+919311036210" class="clickable-link">
-                        <i class="fas fa-phone"></i> +91 9311036210
+                    <a href="tel:+917050624940" class="clickable-link">
+                        <i class="fas fa-phone"></i> +91 70506 24940
                     </a>
                 </div>
                 <div>
-                    <a href="mailto:rubyjhaclass@gmail.com" class="clickable-link">
-                        <i class="fas fa-envelope"></i> rubyjhaclass@gmail.com
+                    <a href="mailto:saurabhhkashyap302@gmail.com" class="clickable-link">
+                        <i class="fas fa-envelope"></i> saurabhhkashyap302@gmail.com
                     </a>
                 </div>
             </div>
@@ -2313,11 +2374,31 @@
         document.getElementById('welcomePopup').classList.add('hidden');
         
         if (type === 'student') {
-            showPage('home');
-        } else if (type === 'teacher') {
-            showTeacherRegistrationPopup();
+            // Student - show interested popup
+            document.getElementById('interestedPopup').classList.add('active');
+        } else if (type === 'faculty') {
+            // Faculty - show registration popup
+            showFacultyRegistrationPopup();
         } else if (type === 'institution') {
-            showPage('enquiry');
+            // Institution - go to contact page
+            showPage('contact');
+        }
+    }
+
+    // ===== INTERESTED POPUP =====
+    function closeInterestedPopup() {
+        document.getElementById('interestedPopup').classList.remove('active');
+    }
+
+    function selectInterest(type) {
+        closeInterestedPopup();
+        
+        if (type === 'tuition') {
+            // Tuition Support - go to home page
+            showPage('home');
+        } else if (type === 'admission') {
+            // Admission Assistance - go to admission page
+            showPage('admission');
         }
     }
 
@@ -2423,7 +2504,7 @@
         formData.append('Board', board);
         formData.append('Requirement Type', selectedRequirement);
         
-        fetch('https://formsubmit.co/rubyjhaclass@gmail.com', {
+        fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
         })
@@ -2458,7 +2539,7 @@
         formData.append('_subject', 'Student Subjects Selection - ShikshaSupport');
         formData.append('Subjects', subjects.join(', '));
         
-        fetch('https://formsubmit.co/rubyjhaclass@gmail.com', {
+        fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
         })
@@ -2474,150 +2555,53 @@
         return false;
     }
 
-    // ===== TEACHER FLOW =====
-    function showTeacherRegistrationPopup() {
-        document.getElementById('teacherRegistrationPopup').classList.add('active');
+    // ===== FACULTY FLOW =====
+    function showFacultyRegistrationPopup() {
+        document.getElementById('facultyRegistrationPopup').classList.add('active');
     }
 
-    function closeTeacherRegistrationPopup() {
-        document.getElementById('teacherRegistrationPopup').classList.remove('active');
+    function closeFacultyRegistrationPopup() {
+        document.getElementById('facultyRegistrationPopup').classList.remove('active');
     }
 
-    function submitTeacherRegistration(event) {
+    function submitFacultyRegistration(event) {
         event.preventDefault();
         
-        const name = document.getElementById('teacherName').value;
-        const email = document.getElementById('teacherEmail').value;
-        const phone = document.getElementById('teacherPhone').value;
-        const qualification = document.getElementById('teacherQualification').value;
-        const subject = document.getElementById('teacherSubject').value;
-        const experience = document.getElementById('teacherExperience').value;
+        const name = document.getElementById('facultyName').value;
+        const email = document.getElementById('facultyEmail').value;
+        const phone = document.getElementById('facultyPhone').value;
+        const qualification = document.getElementById('facultyQualification').value;
+        const subject = document.getElementById('facultySubject').value;
+        const experience = document.getElementById('facultyExperience').value;
         
         if (!name || !email || !phone || !qualification || !subject || !experience) {
             alert('Please fill all fields');
             return false;
         }
         
-        localStorage.setItem('teacherData', JSON.stringify({
-            name, email, phone, qualification, subject, experience
-        }));
-        
         const formData = new FormData();
-        formData.append('_subject', 'New Teacher Registration - ShikshaSupport');
+        formData.append('_subject', 'New Faculty Registration - ShikshaSupport');
         formData.append('Name', name);
         formData.append('Email', email);
         formData.append('Phone', phone);
         formData.append('Qualification', qualification);
         formData.append('Subject', subject);
         formData.append('Experience', experience);
-        formData.append('Status', 'Pending Payment');
+        formData.append('Status', 'Registered');
         
-        fetch('https://formsubmit.co/rubyjhaclass@gmail.com', {
+        fetch('https://formsubmit.co/saurabhhkashyap302@gmail.com', {
             method: 'POST',
             body: formData
         });
         
-        closeTeacherRegistrationPopup();
-        document.getElementById('teacherPaymentPopup').classList.add('active');
+        closeFacultyRegistrationPopup();
+        document.getElementById('facultySuccessPopup').classList.add('active');
         
         return false;
     }
 
-    function closeTeacherPaymentPopup() {
-        document.getElementById('teacherPaymentPopup').classList.remove('active');
-    }
-
-    function showTeacherTransactionPopup() {
-        closeTeacherPaymentPopup();
-        document.getElementById('teacherTransactionPopup').classList.add('active');
-    }
-
-    function closeTeacherTransactionPopup() {
-        document.getElementById('teacherTransactionPopup').classList.remove('active');
-    }
-
-    function toggleResumeRequired() {
-        const noResume = document.getElementById('noResume');
-        const resumeFile = document.getElementById('resumeFile');
-        
-        if (noResume.checked) {
-            resumeFile.removeAttribute('required');
-        } else {
-            resumeFile.setAttribute('required', 'required');
-        }
-    }
-
-    function submitTeacherTransaction(event) {
-        event.preventDefault();
-        
-        const transactionId = document.getElementById('transactionId').value;
-        const noResume = document.getElementById('noResume').checked;
-        const resumeFile = document.getElementById('resumeFile').files[0];
-        
-        if (!transactionId) {
-            alert('Please enter transaction ID');
-            return false;
-        }
-        
-        const teacherData = JSON.parse(localStorage.getItem('teacherData') || '{}');
-        
-        const formData = new FormData();
-        formData.append('_subject', 'Teacher Payment Completed - ShikshaSupport');
-        formData.append('Name', teacherData.name || '');
-        formData.append('Email', teacherData.email || '');
-        formData.append('Phone', teacherData.phone || '');
-        formData.append('Qualification', teacherData.qualification || '');
-        formData.append('Subject', teacherData.subject || '');
-        formData.append('Experience', teacherData.experience || '');
-        formData.append('Transaction ID', transactionId);
-        formData.append('Amount', '₹100');
-        formData.append('Status', 'Paid');
-        
-        if (resumeFile) {
-            formData.append('Resume', resumeFile.name);
-        }
-        
-        if (noResume) {
-            formData.append('Resume Status', 'Not Provided');
-        }
-        
-        fetch('https://formsubmit.co/rubyjhaclass@gmail.com', {
-            method: 'POST',
-            body: formData
-        });
-        
-        closeTeacherTransactionPopup();
-        
-        localStorage.removeItem('teacherData');
-        
-        document.getElementById('teacherSuccessPopup').classList.add('active');
-        
-        return false;
-    }
-
-    function closeTeacherSuccessPopup() {
-        document.getElementById('teacherSuccessPopup').classList.remove('active');
-    }
-
-    // ===== PAY FEES PAGE =====
-    let selectedFeeAmount = 1000;
-
-    function selectFee(course, amount) {
-        selectedFeeAmount = amount;
-        
-        document.querySelectorAll('input[name="fee"]').forEach(radio => {
-            radio.checked = false;
-        });
-        
-        if (course === 'mathematics') document.getElementById('feeMath').checked = true;
-        else if (course === 'science') document.getElementById('feeScience').checked = true;
-        else if (course === 'physics') document.getElementById('feePhysics').checked = true;
-        else if (course === 'chemistry') document.getElementById('feeChemistry').checked = true;
-        else if (course === 'biology') document.getElementById('feeBiology').checked = true;
-        else if (course === 'coding') document.getElementById('feeCoding').checked = true;
-        
-        document.getElementById('selectedAmount').textContent = `₹${amount.toLocaleString()}`;
-        document.getElementById('payfeesQRSection').classList.add('active');
+    function closeFacultySuccessPopup() {
+        document.getElementById('facultySuccessPopup').classList.remove('active');
     }
 
     // ===== SLIDER =====
@@ -2675,7 +2659,7 @@
         if (page === 'home') navLinks[0].classList.add('active');
         else if (page === 'about') navLinks[1].classList.add('active');
         else if (page === 'enquiry') navLinks[2].classList.add('active');
-        else if (page === 'payfees') navLinks[3].classList.add('active');
+        else if (page === 'admission') navLinks[3].classList.add('active');
         else if (page === 'contact') navLinks[4].classList.add('active');
         
         setTimeout(() => {
@@ -2696,32 +2680,34 @@
         return true;
     }
 
+    function validateAdmission() {
+        alert('Admission assistance request submitted! We will contact you soon.');
+        return true;
+    }
+
     // Make functions global
     window.toggleMenu = toggleMenu;
     window.closeMenu = closeMenu;
     window.selectUserType = selectUserType;
+    window.closeInterestedPopup = closeInterestedPopup;
+    window.selectInterest = selectInterest;
     window.selectRequirement = selectRequirement;
     window.showStudentRequirementPopup = showStudentRequirementPopup;
     window.closeStudentRequirementPopup = closeStudentRequirementPopup;
     window.submitStudentRequirement = submitStudentRequirement;
     window.closeStudentSubjectsPopup = closeStudentSubjectsPopup;
     window.submitStudentSubjects = submitStudentSubjects;
-    window.showTeacherRegistrationPopup = showTeacherRegistrationPopup;
-    window.closeTeacherRegistrationPopup = closeTeacherRegistrationPopup;
-    window.submitTeacherRegistration = submitTeacherRegistration;
-    window.closeTeacherPaymentPopup = closeTeacherPaymentPopup;
-    window.showTeacherTransactionPopup = showTeacherTransactionPopup;
-    window.closeTeacherTransactionPopup = closeTeacherTransactionPopup;
-    window.toggleResumeRequired = toggleResumeRequired;
-    window.submitTeacherTransaction = submitTeacherTransaction;
-    window.closeTeacherSuccessPopup = closeTeacherSuccessPopup;
-    window.selectFee = selectFee;
+    window.showFacultyRegistrationPopup = showFacultyRegistrationPopup;
+    window.closeFacultyRegistrationPopup = closeFacultyRegistrationPopup;
+    window.submitFacultyRegistration = submitFacultyRegistration;
+    window.closeFacultySuccessPopup = closeFacultySuccessPopup;
     window.prevSlide = prevSlide;
     window.nextSlide = nextSlide;
     window.goToSlide = goToSlide;
     window.showPage = showPage;
     window.validateEnquiry = validateEnquiry;
     window.validateContact = validateContact;
+    window.validateAdmission = validateAdmission;
     window.fetchCityFromPincode = fetchCityFromPincode;
     window.selectEducationLevel = selectEducationLevel;
     window.selectClass = selectClass;
