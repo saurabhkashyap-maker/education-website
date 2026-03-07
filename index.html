@@ -2918,8 +2918,11 @@
     <script>
 <script>
 function selectFee(course, amount){
-  document.getElementById("payfeesQRSection").style.display = "block";
+  var qr = document.getElementById("payfeesQRSection");
+  if(qr){
+    qr.style.display = "block";
+  }
 }
-    </script>
+</script>
 </body>
 </html>
