@@ -2227,7 +2227,7 @@
                 </div>
             </div>
             
-            <div class="payfees-qr-section" id="payfeesQRSection">
+            <div class="payfees-qr-section" id="payfeesQRSection" style="display:none;">
                 <div class="payment-info">
                 
                     <p><i class="fas fa-building"></i> Shiksha Support</p>
@@ -2915,5 +2915,10 @@
     window.selectEducationLevel = selectEducationLevel;
     window.selectClass = selectClass;
 </script>
+    <script>
+function selectFee(course, amount){
+  document.getElementById("payfeesQRSection").style.display = "block";
+}
+    </script>
 </body>
 </html>
