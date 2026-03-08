@@ -688,6 +688,10 @@
         .payfees-qr-section .payment-info {
             background: white;
         }
+.amount{
+        display:none;
+}
+
 
         /* ===== ADMISSION ASSISTANCE PAGE - PROFESSIONAL DESIGN ===== */
         .admission-page {
