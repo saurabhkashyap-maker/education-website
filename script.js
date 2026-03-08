@@ -444,3 +444,15 @@ document.getElementById("userInput").value="";
 }
 
 }
+document.getElementById("chat-toggle").onclick = function() {
+
+let bot = document.getElementById("chatbot");
+
+if(bot.style.display === "none" || bot.style.display === ""){
+bot.style.display = "block";
+}
+else{
+bot.style.display = "none";
+}
+
+};
