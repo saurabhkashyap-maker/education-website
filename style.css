@@ -1371,6 +1371,16 @@
                     justify-items: crnter;
                     margin: 0 auto;
             }
+.contact-map{
+max-width:900px;
+margin:40px auto;
+text-align:center;
+}
+
+.contact-map iframe{
+width:100%;
+border-radius:12px;
+}
         }
 
         .contact-info, .contact-form {
