@@ -404,3 +404,43 @@
     window.validateAdmission = validateAdmission;
     window.selectEducationLevel = selectEducationLevel;
     window.selectClass = selectClass;
+
+document.getElementById("chat-toggle").onclick=function(){
+let bot=document.getElementById("chatbot");
+bot.style.display=(bot.style.display==="block")?"none":"block";
+};
+
+function handleChat(event){
+
+if(event.key==="Enter"){
+
+let input=document.getElementById("userInput").value.toLowerCase();
+let reply="";
+
+if(input.includes("fee") || input.includes("fees")){
+reply="You can pay fees from the Pay Fees page using QR code.";
+}
+
+else if(input.includes("class") || input.includes("course")){
+reply="We provide Mathematics and Science coaching classes.";
+}
+
+else if(input.includes("address") || input.includes("location")){
+reply="Our address is 2nd Floor, Channi Associate Building, Labour Chowk, Sant Nagar, Delhi.";
+}
+
+else{
+
+let whatsapp="https://wa.me/919311036210?text=Hello%20Shiksha%20Support,%20Someone%20asked:%20"+input;
+
+reply="I don't have this information. <a href='"+whatsapp+"' target='_blank'>Contact us on WhatsApp</a>";
+}
+
+document.getElementById("chat-body").innerHTML+=
+"<p><b>You:</b> "+input+"</p>"+
+"<p><b>AI:</b> "+reply+"</p>";
+
+document.getElementById("userInput").value="";
+}
+
+}
