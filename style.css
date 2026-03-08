@@ -1359,14 +1359,17 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr;
             gap: 20px;
+                justify-items: center;
         }
 
         @media screen and (max-width: 768px) {
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                    justify-items: crnter;
+                    margin: 0 auto;
             }
         }
 
