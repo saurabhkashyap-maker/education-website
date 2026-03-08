@@ -945,6 +945,14 @@
             border-radius: 40px;
             border: 1px solid rgba(255,255,255,0.2);
         }
+/* Mobile Fix */
+@media (max-width: 768px) {
+        .slide-content{
+                backdrop-filter: none;
+                background: rgba(0,0,0,0.5);
+        }
+
+}
 
         .slide-content h2 {
             font-size: 36px;
