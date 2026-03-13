@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport"/>
+<!-- ===== SEO TAGS ===== -->
+<title>Shiksha Support - Home Tuition, Online Classes &amp; Admission Assistance in Delhi NCR</title>
+<meta content="Shiksha Support offers trusted home tuition, online classes and admission assistance in Delhi NCR and across India. Expert tutors from Nursery to Class 12 and competitive exams for CBSE, ICSE and all boards." name="description"/>
+<meta content="home tuition in Delhi NCR, online classes in India, admission assistance Delhi, nursery to class 12 tuition, CBSE tuition, ICSE tuition, state board tuition, competitive exam coaching, private tutor Delhi, home tutor near me, Shiksha Support" name="keywords"/>
+<meta content="Shiksha Support" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="English" name="language"/>
+<meta content="7 days" name="revisit-after"/>
+<!-- Open Graph / Social Media Tags -->
+<meta content="Shiksha Support - Home Tuition, Online Classes &amp; Admission Assistance" property="og:title"/>
+<meta content="Trusted home tuition, online classes and admission assistance in Delhi NCR and across India. Expert tutors for all boards." property="og:description"/>
+<meta content="images/twitter-logo.jpg" property="og:image"/>
+<meta content="https://www.shikshasupport.com" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Cards -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Shiksha Support - Empowering Education" name="twitter:title"/>
+<meta content="Home Tuition, Online Classes &amp; Admission Assistance in Delhi NCR" name="twitter:description"/>
+<meta content="images/twitter-logo.jpg" name="twitter:image"/>
+<!-- Canonical URL -->
+<link href="https://www.shikshasupport.com" rel="canonical"/>
+<!-- Favicon -->
+<link href="favicon.png" rel="icon" type="image/png"/>
+<!-- Font Awesome 6 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<!-- ===== WELCOME POPUP ===== -->
+<div class="welcome-popup" id="welcomePopup">
+<div class="popup-card">
+<div class="popup-header">
+<div class="logo-icon" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;">
+<img alt="Shiksha Support Logo" src="images/sikshalogo.png"/>
+</div>
+<h2>Welcome to Shiksha Support!</h2>
+<p><strong>Let us know about yourself</strong></p>
+<p style="margin-top: 15px;">Shiksha Support offers Home Tuition, Online Classes and Admission Assistance in Delhi NCR and across India. Expert tutors available for all the classes right from Nursery to Class 10th &amp; 12th of CBSE, ICSE, IB and all the state boards and also for the competitive exams such as NEET, JEE, NDA, CUET, NCLAT, CAT etc.</p>
+</div>
+<div class="popup-body">
+<div class="user-type-options">
+<div class="user-type-btn" onclick="selectUserType('student')">
+<i class="fas fa-user-graduate"></i>
+<span>Student</span>
+</div>
+<div class="user-type-btn" onclick="selectUserType('faculty')">
+<i class="fas fa-chalkboard-teacher"></i>
+<span>Faculty</span>
+</div>
+<div class="user-type-btn" onclick="selectUserType('institution')">
+<i class="fas fa-building"></i>
+<span>Institution</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== INTERESTED POPUP (No Cancel Button) ===== -->
+<div class="interested-popup" id="interestedPopup">
+<div class="popup-card">
+<div class="popup-header">
+<h2><i class="fas fa-question-circle"></i> Interested In</h2>
+<p>What would you like to know more about?</p>
+</div>
+<div class="popup-body">
+<div class="interest-options">
+<div class="interest-btn" onclick="selectInterest('tuition')">
+<i class="fas fa-book-open"></i>
+                    Tuition Support
+                </div>
+<div class="interest-btn" onclick="selectInterest('admission')">
+<i class="fas fa-graduation-cap"></i>
+                    Admission Assistance
+                </div>
+</div>
+<!-- Cancel button removed as requested -->
+</div>
+</div>
+</div>
+<!-- ===== STUDENT REQUIREMENT POPUP ===== -->
+<div class="form-popup" id="studentRequirementPopup">
+<div class="form-card">
+<div class="close-btn" onclick="closeStudentRequirementPopup()">×</div>
+<div class="form-header">
+<h3><i class="fas fa-clipboard-list"></i> Your Details</h3>
+</div>
+<div class="form-body">
+<form id="studentRequirementForm" onsubmit="submitStudentRequirement(event)">
+<input name="_subject" type="hidden" value="New Student Requirement - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+<input class="form-control" id="reqName" name="Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-phone"></i> Contact Number <span style="color: red;">*</span></label>
+<div style="display: flex; gap: 10px;">
+<div style="width: 100px;">
+<select class="form-control" name="Country Code" style="padding: 15px 5px;">
+<option selected="" value="+91">+91</option>
+<option value="+1">+1</option>
+<option value="+44">+44</option>
+<option value="+61">+61</option>
+</select>
+</div>
+<div style="flex: 1;">
+<input class="form-control" id="reqPhone" name="Phone" placeholder="Enter 10-digit number" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-city"></i> City <span style="color: red;">*</span></label>
+<input class="form-control" id="reqCity" name="City" placeholder="Enter your city" required="" type="text"/>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-location-dot"></i> Locality <span style="color: red;">*</span></label>
+<input class="form-control" id="reqLocality" name="Locality" placeholder="e.g., Rohini" required="" type="text" value="Rohini"/>
+</div>
+<div class="form-group pincode-group">
+<label><i class="fas fa-map-pin"></i> Pin Code <span style="color: red;">*</span></label>
+<input class="form-control" id="reqPincode" maxlength="6" name="Pincode" onkeyup="fetchCityFromPincode()" placeholder="Enter 6-digit pincode" required="" type="text"/>
+<div class="pincode-hint" id="pincodeHint"></div>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-school"></i> Education Level <span style="color: red;">*</span></label>
+<select class="form-control" id="educationLevel" name="Education Level" onchange="updateClassOptions()">
+<option value="primary">Primary (Nursery - Class 5)</option>
+<option selected="" value="secondary">Secondary (Class 6 - 10)</option>
+<option value="higher">Higher Secondary (Class 11 - 12)</option>
+<option value="ug">UG (College)</option>
+<option value="pg">PG (Post Graduate)</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="form-group" id="classSelectionContainer">
+<label><i class="fas fa-graduation-cap"></i> Select Class/Standard <span style="color: red;">*</span></label>
+<select class="form-control" id="classSelect" name="Class">
+<!-- Options will be populated by JavaScript -->
+</select>
+</div>
+<div class="form-group" id="otherClassContainer" style="display: none;">
+<label><i class="fas fa-pen"></i> Specify Class/Standard <span style="color: red;">*</span></label>
+<input class="form-control" id="otherClass" name="Other Class" placeholder="Enter your class/standard" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-school"></i> Board <span style="color: red;">*</span></label>
+<select class="form-control" id="reqBoard" name="Board" required="">
+<option value="">Select Board</option>
+<option value="CBSE">CBSE</option>
+<option value="ICSE">ICSE</option>
+<option value="IB">IB</option>
+<option value="Bihar Board">Bihar Board</option>
+<option value="UP Board">UP Board</option>
+<option value="MP Board">MP Board</option>
+<option value="Maharashtra Board">Maharashtra Board</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<button class="btn-primary" type="submit">Next <i class="fas fa-arrow-right"></i></button>
+</form>
+</div>
+</div>
+</div>
+<!-- ===== STUDENT SUBJECTS POPUP ===== -->
+<div class="form-popup" id="studentSubjectsPopup">
+<div class="form-card">
+<div class="close-btn" onclick="closeStudentSubjectsPopup()">×</div>
+<div class="form-header">
+<h3><i class="fas fa-book"></i> Select Subjects</h3>
+</div>
+<div class="form-body">
+<form id="studentSubjectsForm" onsubmit="submitStudentSubjects(event)">
+<input name="_subject" type="hidden" value="Student Subjects Selection - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="subjects-grid">
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Mathematics"/> Mathematics
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Science"/> Science
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Physics"/> Physics
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Chemistry"/> Chemistry
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Biology"/> Biology
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="English"/> English
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Hindi"/> Hindi
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Sanskrit"/> Sanskrit
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="History"/> History
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Geography"/> Geography
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Computer Science"/> Computer Science
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Python"/> Python
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Accounts"/> Accounts
+                    </label>
+<label class="subject-checkbox">
+<input name="subjects[]" type="checkbox" value="Economics"/> Economics
+                    </label>
+<label class="subject-checkbox">
+<input id="otherSubjectCheckbox" name="subjects[]" type="checkbox" value="Other"/> Other
+                    </label>
+</div>
+<div class="other-subject" id="otherSubjectBox">
+<input class="form-control" name="Other Subject" placeholder="Please specify subject" type="text"/>
+</div>
+<button class="btn-primary" type="submit">Submit <i class="fas fa-check"></i></button>
+</form>
+</div>
+</div>
+</div>
+<!-- ===== FACULTY REGISTRATION POPUP ===== -->
+<div class="faculty-reg-popup" id="facultyRegistrationPopup">
+<div class="form-card">
+<div class="close-btn" onclick="closeFacultyRegistrationPopup()">×</div>
+<div class="form-header">
+<h3><i class="fas fa-chalkboard-teacher"></i> Faculty Registration</h3>
+</div>
+<div class="form-body">
+<form id="facultyRegistrationForm" onsubmit="submitFacultyRegistration(event)">
+<input name="_subject" type="hidden" value="New Faculty Registration - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-user"></i> Full Name <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyName" name="Full Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-city"></i> City <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyCity" name="City" required="" type="text"/>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-location-dot"></i> Location <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyLocation" name="Location" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-map-pin"></i> Pin Code <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyPincode" name="Pin Code" required="" type="text"/>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-phone"></i> Mobile <span style="color: red;">*</span></label>
+<div style="display: flex; gap: 10px;">
+<div style="width: 100px;">
+<select class="form-control" name="Country Code" style="padding: 15px 5px;">
+<option selected="" value="+91">+91</option>
+<option value="+1">+1</option>
+<option value="+44">+44</option>
+</select>
+</div>
+<div style="flex: 1;">
+<input class="form-control" id="facultyMobile" name="Mobile" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-phone-alt"></i> Alternate (Optional)</label>
+<input class="form-control" id="facultyAlternate" name="Alternate" type="tel"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-graduation-cap"></i> Qualification <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyQualification" name="Qualification" placeholder="e.g., M.Sc, B.Ed" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-chalkboard"></i> Subject Expertise <span style="color: red;">*</span></label>
+<select class="form-control" id="facultySubject" name="Subject Expertise" required="">
+<option value="">Select Subject</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Physics">Physics</option>
+<option value="Chemistry">Chemistry</option>
+<option value="Biology">Biology</option>
+<option value="English">English</option>
+<option value="Computer Science">Computer Science</option>
+<option value="Accounts">Accounts</option>
+<option value="Economics">Economics</option>
+</select>
+</div>
+<div class="form-group">
+<label><i class="fas fa-briefcase"></i> Experience (Years) <span style="color: red;">*</span></label>
+<input class="form-control" id="facultyExperience" name="Experience" required="" type="number"/>
+</div>
+<button class="btn-primary" type="submit">Register</button>
+</form>
+</div>
+</div>
+</div>
+<!-- ===== FACULTY PAYMENT POPUP ===== -->
+<div class="faculty-payment-popup" id="facultyPaymentPopup">
+<div class="form-card">
+<div class="close-btn" onclick="closeFacultyPaymentPopup()">×</div>
+<div class="form-header">
+<h3><i class="fas fa-credit-card"></i> Profile Handling Charges</h3>
+</div>
+<div class="form-body" style="text-align: center;">
+<p>Please pay Rs. 100/- towards profile handling charges.</p>
+<div class="payment-amount">₹100</div>
+<div class="qr-box" style="margin: 20px auto;">
+<img alt="Payment QR Code" src="images/qrcode.png" style="width: 200px; height: 200px;"/>
+</div>
+<p style="color: #667eea; margin: 20px 0;">UPI ID: shikshasupport@okhdfcbank</p>
+<button class="btn-primary" onclick="closeFacultyPaymentPopup()">I've Paid</button>
+</div>
+</div>
+</div>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+<div class="container nav-flex">
+<div class="logo-container" onclick="showPage('home')">
+<div class="logo-icon">
+<img alt="Shiksha Support Logo" src="images/sikshalogo.png"/>
+</div>
+<div class="logo-text">
+<span class="logo-main">Shiksha Support</span>
+<span class="logo-tagline">Empowering Education</span>
+</div>
+</div>
+<button class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</button>
+<div class="nav-links" id="navLinks">
+<a class="active" onclick="showPage('home'); closeMenu()">Home</a>
+<a onclick="showPage('about'); closeMenu()">About Us</a>
+<a onclick="showPage('enquiry'); closeMenu()">Enquiry</a>
+<a onclick="showPage('payfees'); closeMenu()">Pay Fees</a>
+<a onclick="showPage('admission'); closeMenu()">Admission Assistance</a>
+<a onclick="showPage('contact'); closeMenu()">Contact Us</a>
+</div>
+</div>
+</nav>
+<!-- ===== HOME PAGE ===== -->
+<div class="page-section active-section" id="home-page">
+<div class="container home-page">
+<!-- Image Slider -->
+<div class="slider-container" data-aos="fade-up">
+<div class="slider-wrapper" id="sliderWrapper">
+<div class="slide">
+<img alt="Students studying" src="images/slider1.jpeg"/>
+<div class="slide-content">
+<h2>Welcome to Shiksha Support</h2>
+<p>Empowering Education for a Brighter Future</p>
+</div>
+</div>
+<div class="slide">
+<img alt="Teacher teaching" src="images/teacherslider2.jpeg"/>
+<div class="slide-content">
+<h2>Expert Faculty</h2>
+<p>Learn from the best educators in the country</p>
+</div>
+</div>
+<div class="slide">
+<img alt="Online learning" src="images/slider1.jpeg"/>
+<div class="slide-content">
+<h2>Online &amp; Offline Classes</h2>
+<p>Flexible learning options for every student</p>
+</div>
+</div>
+</div>
+<button class="slider-btn prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+<button class="slider-btn next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+<div class="slider-dots" id="sliderDots"></div>
+</div>
+<div class="sections-grid">
+<!-- Section 1 - Requirement -->
+<div class="section-box" data-aos="fade-right">
+<h2><i class="fas fa-hand-peace"></i> We are glad to have you here!</h2>
+<p style="margin-bottom: 25px; color: #64748b;">Let us know your requirement</p>
+<div class="requirement-options" id="requirementOptions">
+<div class="req-option" onclick="selectRequirement('home')">
+<input checked="" id="reqHome" name="requirement" type="radio" value="home"/>
+<label for="reqHome">Looking for home tuition</label>
+</div>
+<div class="req-option" onclick="selectRequirement('group')">
+<input id="reqGroup" name="requirement" type="radio" value="group"/>
+<label for="reqGroup">Looking for group tuition nearby</label>
+</div>
+<div class="req-option" onclick="selectRequirement('online')">
+<input id="reqOnline" name="requirement" type="radio" value="online"/>
+<label for="reqOnline">Looking for online classes</label>
+</div>
+</div>
+<button class="submit-req" onclick="showStudentRequirementPopup()">
+                    Continue <i class="fas fa-arrow-right"></i>
+</button>
+</div>
+<!-- Section 2 - About Preview -->
+<div class="section-box" data-aos="fade-left">
+<h2><i class="fas fa-bullseye"></i> About Shiksha Support</h2>
+<div class="about-preview">
+<p>Shiksha Support, a unit of Jha Classes, is a revolutionary educational platform dedicated to making quality education accessible to every student. We bridge the gap between students and expert educators through personalized learning experiences.</p>
+<a class="read-more-link" onclick="showPage('about')">
+                        Read more about us <i class="fas fa-arrow-right"></i>
+</a>
+<div class="vision-mission">
+<h3><i class="fas fa-eye"></i> Our Vision</h3>
+<p>To create a world where every student has access to personalized, quality education regardless of their location or background.</p>
+<h3 style="margin-top: 15px;"><i class="fas fa-rocket"></i> Our Mission</h3>
+<p>To empower students with the right guidance, resources, and support to achieve their academic goals through innovative teaching methods.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== ABOUT PAGE ===== -->
+<div class="page-section" id="about-page">
+<div class="container about-page">
+<div class="page-header" data-aos="fade-down">
+<h1>About Shiksha Support</h1>
+<p style="color: #64748b;">A unit of Jha Classes - Empowering Education Since 2020</p>
+</div>
+<div class="about-content" data-aos="fade-up">
+<div class="stats-grid">
+<div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+<i class="fas fa-users"></i>
+<div class="number">15K+</div>
+<div class="label">Students</div>
+</div>
+<div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+<i class="fas fa-chalkboard-teacher"></i>
+<div class="number">500+</div>
+<div class="label">Expert Faculty</div>
+</div>
+<div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+<i class="fas fa-video"></i>
+<div class="number">10K+</div>
+<div class="label">Video Lessons</div>
+</div>
+<div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+<i class="fas fa-smile"></i>
+<div class="number">98%</div>
+<div class="label">Satisfaction Rate</div>
+</div>
+</div>
+<h2 style="margin: 30px 0 15px;">Our Story</h2>
+<p>Shiksha Support, a unit of Jha Classes, was founded in 2020 with a simple yet powerful vision - to make quality education accessible to every student in India. What started as a small initiative by a group of passionate educators has now grown into a comprehensive learning platform serving thousands of students across the country. The name "Shiksha Support" combines two Hindi words - "Shiksha" (education) and "Support" - reflecting our commitment to supporting students in their educational journey. We truly believe in building bridges between students and quality education, between learners and expert faculty, between dreams and achievements.</p>
+<h2 style="margin: 30px 0 15px;">Our Vision</h2>
+<p>To create a world where every student has access to personalized, quality education regardless of their location or background. We envision a future where learning is not confined by geographical boundaries but is a seamless, engaging experience available to all.</p>
+<h2 style="margin: 30px 0 15px;">Our Mission</h2>
+<p>Content will be updated in 2nd round. As of now its ok.</p>
+</div>
+</div>
+</div>
+<!-- ===== ENQUIRY PAGE ===== -->
+<div class="page-section" id="enquiry-page">
+<div class="container enquiry-page">
+<div class="page-header" data-aos="fade-down">
+<h1>Enquiry Form</h1>
+<p style="color: #64748b;">Have questions? We're here to help!</p>
+</div>
+<div class="enquiry-grid">
+<div class="enquiry-form" data-aos="fade-right">
+<form action="https://formsubmit.co/rubyjhaclass@gmail.com" method="POST" onsubmit="return validateEnquiry()">
+<input name="_subject" type="hidden" value="New Enquiry - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-user"></i> Full Name <span style="color: red;">*</span></label>
+<input class="form-control" name="Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-phone"></i> Contact Number <span style="color: red;">*</span></label>
+<div style="display: flex; gap: 10px;">
+<div style="width: 100px;">
+<select class="form-control" name="Country Code" style="padding: 15px 5px;">
+<option selected="" value="+91">+91</option>
+</select>
+</div>
+<div style="flex: 1;">
+<input class="form-control" name="Phone" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-envelope"></i> Email <span style="color: red;">*</span></label>
+<input class="form-control" name="Email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-tag"></i> Enquiry Type <span style="color: red;">*</span></label>
+<select class="form-control" name="Enquiry Type" required="">
+<option value="">Select Type</option>
+<option value="Student">Student Enquiry</option>
+<option value="Faculty">Faculty Enquiry</option>
+<option value="Institution">Institution Enquiry</option>
+<option value="Partnership">Partnership</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<label><i class="fas fa-comment"></i> Message <span style="color: red;">*</span></label>
+<textarea class="form-control" name="Message" required="" rows="4"></textarea>
+</div>
+<button class="btn-primary" type="submit">Submit Enquiry</button>
+</form>
+</div>
+<div class="enquiry-info" data-aos="fade-left">
+<h3 style="margin-bottom: 30px;">Why Choose Us?</h3>
+<div class="info-item">
+<i class="fas fa-check-circle"></i>
+<div>
+<h4>Expert Faculty</h4>
+<p>Learn from highly qualified and experienced educators</p>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-check-circle"></i>
+<div>
+<h4>Personalized Learning</h4>
+<p>Tailored curriculum for each student's needs</p>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-check-circle"></i>
+<div>
+<h4>Flexible Timings</h4>
+<p>Learn at your own pace, on your own schedule</p>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-check-circle"></i>
+<div>
+<h4>Affordable Fees</h4>
+<p>Quality education at budget-friendly prices</p>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-check-circle"></i>
+<div>
+<h4>24/7 Support</h4>
+<p>Round-the-clock assistance for all your queries</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== PAY FEES PAGE - NEW DESIGN ===== -->
+<div class="page-section" id="payfees-page">
+<div class="container payfees-page">
+<div class="payfees-header" data-aos="fade-down">
+<h1>Pay Fee Online</h1>
+<p>Select your payment type</p>
+</div>
+<!-- Fee Categories -->
+<div class="fee-category-grid" data-aos="fade-up">
+<div class="fee-category-card" onclick="showPaymentForm('home')">
+<div class="fee-category-icon">
+<i class="fas fa-home"></i>
+</div>
+<h3>Home Tuition</h3>
+<p>Pay for home tuition</p>
+<span class="fee-category-badge">Click to Pay</span>
+</div>
+<div class="fee-category-card" onclick="showPaymentForm('online')">
+<div class="fee-category-icon">
+<i class="fas fa-laptop"></i>
+</div>
+<h3>Online Classes</h3>
+<p>Pay for online classes</p>
+<span class="fee-category-badge">Click to Pay</span>
+</div>
+<div class="fee-category-card" onclick="showPaymentForm('group')">
+<div class="fee-category-icon">
+<i class="fas fa-users"></i>
+</div>
+<h3>Group Tuition</h3>
+<p>Pay for group tuition</p>
+<span class="fee-category-badge">Click to Pay</span>
+</div>
+</div>
+<!-- Payment Form - Home Tuition -->
+<div class="payment-form-container" id="homeTuitionForm">
+<div class="payment-form-header">
+<i class="fas fa-home"></i>
+<div>
+<h3>Home Tuition Payment</h3>
+<p>Fill the details to pay for home tuition</p>
+</div>
+</div>
+<form id="homeTuitionPaymentForm" onsubmit="submitPaymentForm(event, 'home')">
+<input name="_subject" type="hidden" value="Home Tuition Payment - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="teacher-name-field">
+<label><i class="fas fa-chalkboard-teacher"></i> Fill teacher's name <span class="mandatory-badge">Mandatory</span></label>
+<input class="form-control" name="Teacher Name" required="" type="text"/>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+<input class="form-control" name="Student Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-id-card"></i> Student ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Student ID" required="" type="text"/>
+</div>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+<input class="form-control" name="Subject" placeholder="Fill subject name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+<input class="form-control" name="Amount" placeholder="Enter amount" required="" type="number"/>
+</div>
+</div>
+<div class="qr-section">
+<img alt="Payment QR Code" src="images/qrcode.png"/>
+<p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+<!-- Transaction Section -->
+<div class="transaction-section" id="homeTransaction">
+<h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+<form onsubmit="submitTransaction(event, 'home')">
+<input name="_subject" type="hidden" value="Home Tuition Transaction ID - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Transaction ID" placeholder="Enter transaction ID" required="" type="text"/>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+</div>
+</div>
+<!-- Payment Form - Online Classes -->
+<div class="payment-form-container" id="onlineClassesForm">
+<div class="payment-form-header">
+<i class="fas fa-laptop"></i>
+<div>
+<h3>Online Classes Payment</h3>
+<p>Fill the details to pay for online classes</p>
+</div>
+</div>
+<form id="onlineClassesPaymentForm" onsubmit="submitPaymentForm(event, 'online')">
+<input name="_subject" type="hidden" value="Online Classes Payment - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="teacher-name-field">
+<label><i class="fas fa-chalkboard-teacher"></i> Fill teacher's name <span class="mandatory-badge">Mandatory</span></label>
+<input class="form-control" name="Teacher Name" required="" type="text"/>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+<input class="form-control" name="Student Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-id-card"></i> Student ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Student ID" required="" type="text"/>
+</div>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+<input class="form-control" name="Subject" placeholder="Fill subject name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+<input class="form-control" name="Amount" placeholder="Enter amount" required="" type="number"/>
+</div>
+</div>
+<div class="qr-section">
+<img alt="Payment QR Code" src="images/qrcode.png"/>
+<p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+<!-- Transaction Section -->
+<div class="transaction-section" id="onlineTransaction">
+<h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+<form onsubmit="submitTransaction(event, 'online')">
+<input name="_subject" type="hidden" value="Online Classes Transaction ID - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Transaction ID" placeholder="Enter transaction ID" required="" type="text"/>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+</div>
+</div>
+<!-- Payment Form - Group Tuition -->
+<div class="payment-form-container" id="groupTuitionForm">
+<div class="payment-form-header">
+<i class="fas fa-users"></i>
+<div>
+<h3>Group Tuition Payment</h3>
+<p>Fill the details to pay for group tuition</p>
+</div>
+</div>
+<form id="groupTuitionPaymentForm" onsubmit="submitPaymentForm(event, 'group')">
+<input name="_subject" type="hidden" value="Group Tuition Payment - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="center-name-field">
+<label><i class="fas fa-building"></i> Fill center Name <span class="mandatory-badge">Mandatory</span></label>
+<input class="form-control" name="Center Name" required="" type="text"/>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+<input class="form-control" name="Student Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-id-card"></i> Student ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Student ID" required="" type="text"/>
+</div>
+</div>
+<div class="row-flex">
+<div class="form-group">
+<label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+<input class="form-control" name="Subject" placeholder="Fill subject name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+<input class="form-control" name="Amount" placeholder="Enter amount" required="" type="number"/>
+</div>
+</div>
+<div class="qr-section">
+<img alt="Payment QR Code" src="images/qrcode.png"/>
+<p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+<!-- Transaction Section -->
+<div class="transaction-section" id="groupTransaction">
+<h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+<form onsubmit="submitTransaction(event, 'group')">
+<input name="_subject" type="hidden" value="Group Tuition Transaction ID - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+<input class="form-control" name="Transaction ID" placeholder="Enter transaction ID" required="" type="text"/>
+</div>
+<button class="btn-primary" type="submit">SUBMIT</button>
+</form>
+</div>
+</div>
+<!-- Payment Note -->
+<div class="payment-note">
+<i class="fas fa-info-circle"></i>
+<p>Payment of any amount is not a confirmation of full and final payment. Full and final payment shall be subject to proper accounting and calculation of class hours.</p>
+</div>
+</div>
+</div>
+<!-- ===== ADMISSION ASSISTANCE PAGE ===== -->
+<div class="page-section" id="admission-page">
+<div class="container admission-page">
+<!-- Hero Section -->
+<div class="admission-hero" data-aos="fade-up">
+<h1>Admission Assistance</h1>
+<p>Get expert guidance for school and college admissions across India. We help you find the perfect institution for your academic journey.</p>
+</div>
+<!-- Institution Showcase -->
+<div class="institution-showcase" data-aos="fade-up">
+<h2>Partner Institutions</h2>
+<div class="institution-grid">
+<div class="institution-card">
+<img alt="University" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"/>
+<div class="institution-info">
+<h3>Partner Institution</h3>
+<p>Prestigious educational institute</p>
+</div>
+</div>
+<div class="institution-card">
+<img alt="University" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"/>
+<div class="institution-info">
+<h3>Partner Institution</h3>
+<p>Premier educational institute</p>
+</div>
+</div>
+<div class="institution-card">
+<img alt="University" src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2086&amp;q=80"/>
+<div class="institution-info">
+<h3>Partner Institution</h3>
+<p>Top-ranked university</p>
+</div>
+</div>
+<div class="institution-card">
+<img alt="Medical College" src="https://images.unsplash.com/photo-1592280771190-74fc4e2d1122?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1974&amp;q=80"/>
+<div class="institution-info">
+<h3>Partner Institution</h3>
+<p>Premier medical college</p>
+</div>
+</div>
+<div class="institution-card">
+<img alt="University" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"/>
+<div class="institution-info">
+<h3>Partner Institution</h3>
+<p>Leading private university</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Features -->
+<div class="admission-features">
+<div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+<i class="fas fa-university"></i>
+<h3>100+ Colleges</h3>
+<p>We may assist you in securing admission in more than 100 prestigious Institutions &amp; Universities in the course of your interest like B.Tech, Medical, Law, MBA, MCA, various UG &amp; PG programs, Ph.D courses.</p>
+</div>
+<div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
+<i class="fas fa-check-circle"></i>
+<h3>Personalized Guidance</h3>
+<p>Get our experts counseling for every step of your admission journey at a very nominal fee.</p>
+</div>
+<div class="feature-box" data-aos="zoom-in" data-aos-delay="300">
+<i class="fas fa-rupee-sign"></i>
+<h3>Affordable Fees</h3>
+<p>We are here to assist you in getting admission of your ward in Prestigious Schools for any class or standard.</p>
+</div>
+</div>
+<!-- Admission Form -->
+<div class="admission-form-container" data-aos="fade-up">
+<h3>Request Admission Assistance</h3>
+<p>Fill the form below and our counselors will get in touch with you</p>
+<form action="https://formsubmit.co/rubyjhaclass@gmail.com" method="POST" onsubmit="return validateAdmission()">
+<input name="_subject" type="hidden" value="New Admission Assistance Request - Shiksha Support"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="false"/>
+<div class="form-group">
+<label><i class="fas fa-user"></i> Student Name <span style="color: red;">*</span></label>
+<input class="form-control" name="Student Name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-calendar"></i> Date of Birth <span style="color: red;">*</span></label>
+<input class="form-control" name="Date of Birth" required="" type="date"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-graduation-cap"></i> Current Class/Grade <span style="color: red;">*</span></label>
+<select class="form-control" name="Current Class" required="">
+<option value="">Select Current Class</option>
+<option value="Nursery">Nursery</option>
+<option value="LKG">LKG</option>
+<option value="UKG">UKG</option>
+<option value="Class 1">Class 1</option>
+<option value="Class 2">Class 2</option>
+<option value="Class 3">Class 3</option>
+<option value="Class 4">Class 4</option>
+<option value="Class 5">Class 5</option>
+<option value="Class 6">Class 6</option>
+<option value="Class 7">Class 7</option>
+<option value="Class 8">Class 8</option>
+<option value="Class 9">Class 9</option>
+<option value="Class 10">Class 10</option>
+<option value="Class 11">Class 11</option>
+<option value="Class 12">Class 12</option>
+<option value="UG">UG</option>
+<option value="PG">PG</option>
+</select>
+</div>
+<div class="form-group">
+<label><i class="fas fa-school"></i> Admission Seeking For <span style="color: red;">*</span></label>
+<select class="form-control" name="Admission For" required="">
+<option value="">Select Level</option>
+<option value="Primary School">Primary School (Nursery - Class 5)</option>
+<option value="Secondary School">Secondary School (Class 6 - 10)</option>
+<option value="Higher Secondary">Higher Secondary (Class 11 - 12)</option>
+<option value="College">College/University</option>
+</select>
+</div>
+<div class="form-group">
+<label><i class="fas fa-phone"></i> Parent's Contact <span style="color: red;">*</span></label>
+<div style="display: flex; gap: 10px;">
+<div style="width: 100px;">
+<select class="form-control" name="Country Code" style="padding: 15px 5px;">
+<option selected="" value="+91">+91</option>
+</select>
+</div>
+<div style="flex: 1;">
+<input class="form-control" name="Parent Contact" required="" type="tel"/>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label><i class="fas fa-envelope"></i> Email <span style="color: red;">*</span></label>
+<input class="form-control" name="Email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label><i class="fas fa-map-marker-alt"></i> Address <span style="color: red;">*</span></label>
+<textarea class="form-control" name="Address" required="" rows="3"></textarea>
+</div>
+<div class="form-group">
+<label><i class="fas fa-comment"></i> Preferred Schools/Colleges (if any)</label>
+<textarea class="form-control" name="Preferred Institutions" placeholder="List any specific schools or colleges you're interested in" rows="2"></textarea>
+</div>
+<!-- Consent Checkbox - Mandatory -->
+<div class="consent-checkbox">
+<input id="consentCheckbox" required="" type="checkbox"/>
+<label for="consentCheckbox">I authorize the representative from Shiksha Support team to connect me any time with reference to my request. I shall have no objection whatsoever it is, if the call is made at any time on any day.</label>
+</div>
+<button class="btn-primary" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+<!-- ===== CONTACT PAGE ===== -->
+<div class="page-section" id="contact-page">
+<div class="container contact-page">
+<div class="page-header" data-aos="fade-down">
+<h1>Contact Us</h1>
+<p style="color: #64748b;">Get in touch with us</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info" data-aos="fade-right">
+<h3 style="margin-bottom: 30px;">Contact Information</h3>
+<div class="info-item">
+<i class="fas fa-map-marker-alt"></i>
+<div>
+<h4>Address</h4>
+<a class="clickable-link" href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank">
+<p>Main Road, P5VX+QFP, Parvatiya Anchal, Block B, Sant Nagar, Burari, Delhi, 110084, India</p>
+</a>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-phone"></i>
+<div>
+<h4>Phone</h4>
+<a class="clickable-link" href="tel:+919311036210">
+<p>+91 93110 36210</p>
+</a>
+<a class="clickable-link" href="tel:+917053886423">
+<p>+91 70538 86423</p>
+</a>
+<a class="clickable-link" href="tel:+917050624940">
+<p>+91 70506 24940</p>
+</a>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-envelope"></i>
+<div>
+<h4>Email</h4>
+<a class="clickable-link" href="mailto:info@shikshasupport.com">
+<p>info@shikshasupport.com</p>
+</a>
+<a class="clickable-link" href="mailto:rubyjhaclass@gmail.com">
+<p>rubyjhaclass@gmail.com</p>
+</a>
+</div>
+</div>
+<div class="info-item">
+<i class="fas fa-clock"></i>
+<div>
+<h4>Working Hours</h4>
+<p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+<p>Sunday: 10:00 AM - 4:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-location">
+<div class="main-location">
+<a class="clickable-link" href="https://maps.google.com/?q=Main+Road,+P5VX+QFP,+Parvatiya+Anchal,+Block+B,+Sant+Nagar,+Burari,+Delhi,+110084" target="_blank">
+<i class="fas fa-map-marker-alt"></i> Main Road, Burari, Delhi - 110084
+                    </a>
+</div>
+<div class="locality">
+<i class="fas fa-location-dot"></i> Locality: Sant Nagar, Burari
+                </div>
+</div>
+<div class="footer-contact">
+<div>
+<a class="clickable-link" href="tel:+919311036210">
+<i class="fas fa-phone"></i> +91 93110 36210
+                    </a>
+</div>
+<div>
+<a class="clickable-link" href="tel:+917053886423">
+<i class="fas fa-phone"></i> +91 70538 86423
+                    </a>
+</div>
+<div>
+<a class="clickable-link" href="mailto:rubyjhaclass@gmail.com">
+<i class="fas fa-envelope"></i> rubyjhaclass@gmail.com
+                    </a>
+</div>
+</div>
+</div>
+<div class="copyright">
+<p>© 2026 Shiksha Support (A unit of Jha Classes). All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- AOS Animation Library -->
+
+
+<script src="style.js"></script></body>
+</html>
