@@ -1,0 +1,3519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    
+    <!-- ===== SEO TAGS ===== -->
+    <title>Shiksha Support - Home Tuition, Online Classes & Admission Assistance in Delhi NCR</title>
+    <meta name="description" content="Shiksha Support offers trusted home tuition, online classes and admission assistance in Delhi NCR and across India. Expert tutors from Nursery to Class 12 and competitive exams for CBSE, ICSE and all boards.">
+    <meta name="keywords" content="home tuition in Delhi NCR, online classes in India, admission assistance Delhi, nursery to class 12 tuition, CBSE tuition, ICSE tuition, state board tuition, competitive exam coaching, private tutor Delhi, home tutor near me, Shiksha Support">
+    <meta name="author" content="Shiksha Support">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Shiksha Support - Home Tuition, Online Classes & Admission Assistance">
+    <meta property="og:description" content="Trusted home tuition, online classes and admission assistance in Delhi NCR and across India. Expert tutors for all boards.">
+    <meta property="og:image" content="images/twitter-logo.jpg">
+    <meta property="og:url" content="https://www.shikshasupport.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shiksha Support - Empowering Education">
+    <meta name="twitter:description" content="Home Tuition, Online Classes & Admission Assistance in Delhi NCR">
+    <meta name="twitter:image" content="images/twitter-logo.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.shikshasupport.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS Variables ===== */
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #fbbf24;
+            --text-color: #334155;
+            --light-bg: #f8fafc;
+            --white: #ffffff;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #fbbf24;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient);
+            border-radius: 5px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .nav-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+            background: var(--gradient);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .logo-tagline {
+            font-size: 11px;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== MOBILE MENU BUTTON ===== */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #f0f4ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 15px;
+            position: relative;
+            padding: 5px 0;
+            white-space: nowrap;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                order: 3;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius: 0 0 20px 20px;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                background: var(--light-bg);
+                border-radius: 10px;
+                white-space: normal;
+            }
+
+            .nav-links a:hover {
+                background: #f0f4ff;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .logo-container {
+                flex: 1;
+            }
+
+            .logo-main {
+                font-size: 18px;
+            }
+
+            .logo-tagline {
+                font-size: 10px;
+            }
+        }
+
+        /* ===== WELCOME POPUP ===== */
+        .welcome-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: all 0.3s ease;
+        }
+
+        .welcome-popup.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .popup-card {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 40px;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
+            transform: translateY(0);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-header {
+            background: var(--gradient);
+            padding: 40px 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .popup-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .popup-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .popup-header p {
+            position: relative;
+            opacity: 0.95;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .popup-body {
+            padding: 40px 30px;
+        }
+
+        .user-type-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .user-type-btn {
+            background: var(--light-bg);
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .user-type-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102,126,234,0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .user-type-btn:hover::before {
+            left: 100%;
+        }
+
+        .user-type-btn:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+        }
+
+        .user-type-btn i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        /* ===== INTERESTED POPUP ===== */
+        .interested-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10001;
+        }
+
+        .interested-popup.active {
+            display: flex;
+        }
+
+        .interest-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .interest-btn {
+            background: var(--light-bg);
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .interest-btn:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.2);
+        }
+
+        .interest-btn i {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ===== FORM POPUPS ===== */
+        .form-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10002;
+        }
+
+        .form-popup.active {
+            display: flex;
+        }
+
+        .form-card {
+            background: white;
+            width: 90%;
+            max-width: 550px;
+            border-radius: 40px;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.5s ease;
+        }
+
+        .form-header {
+            background: var(--gradient);
+            padding: 25px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .form-header h3 {
+            font-size: 24px;
+        }
+
+        .form-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .form-group label i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23667eea' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+        }
+
+        .row-flex {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row-flex .form-group {
+            flex: 1;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(102, 126, 234, 0.4);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: white;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
+        }
+
+        /* ===== AI CHATBOT ===== */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            border: 3px solid white;
+        }
+
+        .chatbot-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-container {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 380px;
+            height: 550px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1000;
+            border: 2px solid var(--primary-color);
+        }
+
+        .chatbot-container.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chatbot-header i {
+            font-size: 24px;
+        }
+
+        .chatbot-header h3 {
+            flex: 1;
+            font-size: 18px;
+        }
+
+        .close-chat {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.bot {
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .bot .message-content {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-top-left-radius: 5px;
+        }
+
+        .user .message-content {
+            background: var(--gradient);
+            color: white;
+            border-top-right-radius: 5px;
+        }
+
+        .enquiry-button {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            transition: all 0.3s;
+        }
+
+        .enquiry-button:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .chat-input-area input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .chat-input-area button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .chat-input-area button:hover {
+            transform: scale(1.1);
+        }
+
+        /* ===== FACULTY REGISTRATION POPUP ===== */
+        .faculty-reg-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10003;
+        }
+
+        .faculty-reg-popup.active {
+            display: flex;
+        }
+
+        .faculty-payment-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10004;
+        }
+
+        .faculty-payment-popup.active {
+            display: flex;
+        }
+
+        .payment-amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        /* ===== PAY FEES PAGE ===== */
+        .payfees-page {
+            padding: 40px 0;
+        }
+
+        .payfees-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .payfees-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .payfees-header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .fee-category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .fee-category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fee-category-card {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fee-category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient);
+            transform: translateX(-100%);
+            transition: transform 0.4s;
+        }
+
+        .fee-category-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .fee-category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 45px -15px rgba(102,126,234,0.3);
+        }
+
+        .fee-category-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .fee-category-icon i {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+
+        .fee-category-card h3 {
+            font-size: 22px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .fee-category-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .fee-category-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Payment Form Container */
+        .payment-form-container {
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            display: none;
+        }
+
+        .payment-form-container.active {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .payment-form-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .payment-form-header i {
+            font-size: 40px;
+            color: var(--primary-color);
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 20px;
+        }
+
+        .payment-form-header h3 {
+            font-size: 24px;
+            color: #1e293b;
+        }
+
+        .teacher-name-field {
+            background: #f0f4ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .teacher-name-field label {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .center-name-field {
+            background: #f0f4ff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .center-name-field label {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .mandatory-badge {
+            display: inline-block;
+            background: var(--danger);
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+
+        .warning-text {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 20px;
+            margin: 20px 0;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-text i {
+            font-size: 24px;
+        }
+
+        .qr-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 20px;
+        }
+
+        .qr-section img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(102,126,234,0.3);
+        }
+
+        .transaction-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 20px;
+            display: none;
+        }
+
+        .transaction-section.active {
+            display: block;
+        }
+
+        .payment-note {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 20px;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .payment-note i {
+            font-size: 30px;
+        }
+
+        /* ===== ADMISSION ASSISTANCE PAGE ===== */
+        .admission-page {
+            padding: 40px 0;
+        }
+
+        .admission-hero {
+            background: linear-gradient(135deg, rgba(102,126,234,0.9) 0%, rgba(118,75,162,0.9) 100%), url('images/slider1.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 40px;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .admission-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        .admission-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .admission-hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            opacity: 0.95;
+        }
+
+        .institution-showcase {
+            margin: 50px 0;
+        }
+
+        .institution-showcase h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .institution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .institution-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .institution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 45px -15px rgba(102,126,234,0.3);
+        }
+
+        .institution-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .institution-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .institution-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .institution-info h3 {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .institution-info p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .admission-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .admission-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-box {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+        }
+
+        .feature-box i {
+            font-size: 40px;
+            color: var(--primary-color);
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 20px;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .admission-form-container {
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+
+        .admission-form-container h3 {
+            font-size: 24px;
+            color: #1e293b;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .admission-form-container > p {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .consent-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .consent-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--primary-color);
+        }
+
+        .consent-checkbox label {
+            font-size: 14px;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        /* ===== HOME PAGE ===== */
+        .home-page {
+            padding: 20px 0;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 40px;
+            margin: 20px 0;
+            box-shadow: 0 30px 50px -15px rgba(0,0,0,0.3);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 90%;
+            max-width: 600px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            padding: 30px 20px;
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .slide-content h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .slide-content p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--primary-color);
+            z-index: 10;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .slider-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+            .slider-container {
+                height: 350px;
+            }
+            .slide-content h2 {
+                font-size: 28px;
+            }
+        }
+
+        .section-box {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 35px -10px rgba(102,126,234,0.2);
+        }
+
+        .section-box h2 {
+            font-size: 22px;
+            color: #1e293b;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-box h2 i {
+            color: var(--primary-color);
+        }
+
+        .read-more-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .read-more-link:hover {
+            color: var(--secondary-color);
+            gap: 12px;
+        }
+
+        .requirement-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .req-option {
+            background: var(--light-bg);
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            padding: 12px 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .req-option:hover {
+            border-color: var(--primary-color);
+            background: #f0f4ff;
+        }
+
+        .req-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-color);
+        }
+
+        .req-option label {
+            font-weight: 500;
+            cursor: pointer;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .submit-req {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            font-size: 15px;
+        }
+
+        .submit-req:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102,126,234,0.4);
+        }
+
+        .about-preview {
+            color: #4b5563;
+        }
+
+        .about-preview p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .vision-mission {
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
+            border-radius: 25px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(102,126,234,0.2);
+        }
+
+        .vision-mission h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vision-mission p {
+            font-size: 13px;
+        }
+
+        /* ===== SUBJECTS GRID ===== */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .subject-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            background: var(--light-bg);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            font-size: 14px;
+        }
+
+        .subject-checkbox:hover {
+            background: #f0f4ff;
+            border-color: var(--primary-color);
+        }
+
+        .subject-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-color);
+        }
+
+        .other-subject {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .other-subject.show {
+            display: block;
+        }
+
+        /* ===== ABOUT PAGE ===== */
+        .about-page {
+            padding: 20px 0;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            background: white;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(102,126,234,0.2);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(102,126,234,0.15);
+        }
+
+        .stat-card i {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-card .number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .stat-card .label {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .mission-text {
+            margin-top: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--light-bg), #f0f4ff);
+            border-radius: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* ===== ENQUIRY PAGE (Hidden) ===== */
+        .enquiry-page {
+            display: none;
+        }
+
+        /* ===== CONTACT PAGE ===== */
+        .contact-page {
+            padding: 20px 0;
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.05);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .info-item:hover {
+            transform: translateX(8px);
+            background: #f0f4ff;
+        }
+
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .info-item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .clickable-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .clickable-link:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .clickable-link i {
+            color: var(--warning);
+        }
+
+        .whatsapp-link {
+            color: #25D366;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1e1b4b;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102,126,234,0.15) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-location {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-location .main-location {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .footer-location .branch {
+            font-size: 14px;
+            color: var(--warning);
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            padding: 8px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-contact div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 40px;
+            backdrop-filter: blur(5px);
+            font-size: 14px;
+        }
+
+        .footer-contact a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-contact a:hover {
+            color: var(--warning);
+        }
+
+        .footer-contact i {
+            color: var(--warning);
+        }
+
+        .copyright {
+            text-align: center;
+            opacity: 0.8;
+            font-size: 13px;
+            position: relative;
+            z-index: 1;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ===== PAGE SECTIONS ===== */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active-section {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enquiry page hidden */
+        #enquiry-page {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== AI CHATBOT ===== -->
+<div class="chatbot-btn" onclick="toggleChatbot()">
+    <i class="fas fa-robot"></i>
+</div>
+
+<div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+        <i class="fas fa-robot"></i>
+        <h3>Shiksha AI Assistant</h3>
+        <i class="fas fa-times close-chat" onclick="toggleChatbot()"></i>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message bot">
+            <div class="message-content">
+                👋 Namaste! I'm Shiksha AI Assistant. Ask me anything about:
+                <br>• 📚 Tuition classes
+                <br>• 🎓 Admission assistance
+                <br>• 💰 Fee payment
+                <br>• 👨‍🏫 Faculty registration
+                <br>• 📞 Contact details
+            </div>
+        </div>
+    </div>
+    <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendMessage()">
+        <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+</div>
+
+<!-- ===== WELCOME POPUP ===== -->
+<div class="welcome-popup" id="welcomePopup">
+    <div class="popup-card">
+        <div class="popup-header">
+            <div class="logo-icon" style="margin: 0 auto 20px; width: 100px; height: 100px; border-radius: 20px;">
+                <img src="images/sikshalogo.png" alt="Shiksha Support Logo">
+            </div>
+            <h2>Welcome to Shiksha Support!</h2>
+            <p><strong>Let us know about yourself</strong></p>
+            <p style="margin-top: 15px;">Shiksha Support offers Home Tuition, Online Classes and Admission Assistance in Delhi NCR and across India. Expert tutors available for all the classes right from Nursery to Class 10th & 12th of CBSE, ICSE, IB and all the state boards and also for the competitive exams such as NEET, JEE, NDA, CUET, NCLAT, CAT etc.</p>
+        </div>
+        <div class="popup-body">
+            <div class="user-type-options">
+                <div class="user-type-btn" onclick="selectUserType('student')">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Student</span>
+                </div>
+                <div class="user-type-btn" onclick="selectUserType('faculty')">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculty</span>
+                </div>
+                <div class="user-type-btn" onclick="selectUserType('institution')">
+                    <i class="fas fa-building"></i>
+                    <span>Institution</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== INTERESTED POPUP ===== -->
+<div class="interested-popup" id="interestedPopup">
+    <div class="popup-card">
+        <div class="popup-header">
+            <h2><i class="fas fa-question-circle"></i> Interested In</h2>
+            <p>What would you like to know more about?</p>
+        </div>
+        <div class="popup-body">
+            <div class="interest-options">
+                <div class="interest-btn" onclick="selectInterest('tuition')">
+                    <i class="fas fa-book-open"></i>
+                    Tuition Support
+                </div>
+                <div class="interest-btn" onclick="selectInterest('admission')">
+                    <i class="fas fa-graduation-cap"></i>
+                    Admission Assistance
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== STUDENT REQUIREMENT POPUP ===== -->
+<div class="form-popup" id="studentRequirementPopup">
+    <div class="form-card">
+        <div class="close-btn" onclick="closeStudentRequirementPopup()">&times;</div>
+        <div class="form-header">
+            <h3><i class="fas fa-clipboard-list"></i> Your Details</h3>
+        </div>
+        <div class="form-body">
+            <form id="studentRequirementForm" onsubmit="submitStudentRequirement(event)">
+                <input type="hidden" name="_subject" value="New Student Requirement - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+                    <input type="text" name="Name" class="form-control" id="reqName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Contact Number <span style="color: red;">*</span></label>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width: 100px;">
+                            <select name="Country Code" class="form-control" style="padding: 15px 5px;">
+                                <option value="+91" selected>+91</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                                <option value="+61">+61</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="tel" name="Phone" class="form-control" id="reqPhone" placeholder="Enter 10-digit number" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-city"></i> City <span style="color: red;">*</span></label>
+                    <input type="text" name="City" class="form-control" id="reqCity" placeholder="Enter your city" required>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-location-dot"></i> Locality <span style="color: red;">*</span></label>
+                        <input type="text" name="Locality" class="form-control" id="reqLocality" value="Rohini" placeholder="e.g., Rohini" required>
+                    </div>
+                    
+                    <div class="form-group pincode-group">
+                        <label><i class="fas fa-map-pin"></i> Pin Code <span style="color: red;">*</span></label>
+                        <input type="text" name="Pincode" class="form-control" id="reqPincode" placeholder="Enter 6-digit pincode" maxlength="6" onkeyup="fetchCityFromPincode()" required>
+                        <div class="pincode-hint" id="pincodeHint"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-school"></i> Education Level <span style="color: red;">*</span></label>
+                    <select name="Education Level" class="form-control" id="educationLevel" onchange="updateClassOptions()">
+                        <option value="primary">Primary (Nursery - Class 5)</option>
+                        <option value="secondary" selected>Secondary (Class 6 - 10)</option>
+                        <option value="higher">Higher Secondary (Class 11 - 12)</option>
+                        <option value="ug">UG (College)</option>
+                        <option value="pg">PG (Post Graduate)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="classSelectionContainer">
+                    <label><i class="fas fa-graduation-cap"></i> Select Class/Standard <span style="color: red;">*</span></label>
+                    <select name="Class" class="form-control" id="classSelect"></select>
+                </div>
+                
+                <div class="form-group" id="otherClassContainer" style="display: none;">
+                    <label><i class="fas fa-pen"></i> Specify Class/Standard <span style="color: red;">*</span></label>
+                    <input type="text" name="Other Class" class="form-control" id="otherClass" placeholder="Enter your class/standard">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-school"></i> Board <span style="color: red;">*</span></label>
+                    <select name="Board" class="form-control" id="reqBoard" required>
+                        <option value="">Select Board</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSE">ICSE</option>
+                        <option value="IB">IB</option>
+                        <option value="Bihar Board">Bihar Board</option>
+                        <option value="UP Board">UP Board</option>
+                        <option value="MP Board">MP Board</option>
+                        <option value="Maharashtra Board">Maharashtra Board</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ===== STUDENT SUBJECTS POPUP ===== -->
+<div class="form-popup" id="studentSubjectsPopup">
+    <div class="form-card">
+        <div class="close-btn" onclick="closeStudentSubjectsPopup()">&times;</div>
+        <div class="form-header">
+            <h3><i class="fas fa-book"></i> Select Subjects</h3>
+        </div>
+        <div class="form-body">
+            <form id="studentSubjectsForm" onsubmit="submitStudentSubjects(event)">
+                <input type="hidden" name="_subject" value="Student Subjects Selection - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="subjects-grid">
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Mathematics"> Mathematics</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Science"> Science</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Physics"> Physics</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Chemistry"> Chemistry</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Biology"> Biology</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="English"> English</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Hindi"> Hindi</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Sanskrit"> Sanskrit</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="History"> History</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Geography"> Geography</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Computer Science"> Computer Science</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Python"> Python</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Accounts"> Accounts</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Economics"> Economics</label>
+                    <label class="subject-checkbox"><input type="checkbox" name="subjects[]" value="Other" id="otherSubjectCheckbox"> Other</label>
+                </div>
+                
+                <div class="other-subject" id="otherSubjectBox">
+                    <input type="text" name="Other Subject" class="form-control" placeholder="Please specify subject">
+                </div>
+                
+                <button type="submit" class="btn-primary">Submit <i class="fas fa-check"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FACULTY REGISTRATION POPUP ===== -->
+<div class="faculty-reg-popup" id="facultyRegistrationPopup">
+    <div class="form-card">
+        <div class="close-btn" onclick="closeFacultyRegistrationPopup()">&times;</div>
+        <div class="form-header">
+            <h3><i class="fas fa-chalkboard-teacher"></i> Faculty Registration</h3>
+        </div>
+        <div class="form-body">
+            <form id="facultyRegistrationForm" onsubmit="submitFacultyRegistration(event)">
+                <input type="hidden" name="_subject" value="New Faculty Registration - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Full Name <span style="color: red;">*</span></label>
+                    <input type="text" name="Full Name" class="form-control" id="facultyName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-city"></i> City <span style="color: red;">*</span></label>
+                    <input type="text" name="City" class="form-control" id="facultyCity" required>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-location-dot"></i> Location <span style="color: red;">*</span></label>
+                        <input type="text" name="Location" class="form-control" id="facultyLocation" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-map-pin"></i> Pin Code <span style="color: red;">*</span></label>
+                        <input type="text" name="Pin Code" class="form-control" id="facultyPincode" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Mobile <span style="color: red;">*</span></label>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width: 100px;">
+                            <select name="Country Code" class="form-control" style="padding: 15px 5px;">
+                                <option value="+91" selected>+91</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                            </select>
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="tel" name="Mobile" class="form-control" id="facultyMobile" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-phone-alt"></i> Alternate (Optional)</label>
+                    <input type="tel" name="Alternate" class="form-control" id="facultyAlternate">
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-graduation-cap"></i> Qualification <span style="color: red;">*</span></label>
+                    <input type="text" name="Qualification" class="form-control" id="facultyQualification" placeholder="e.g., M.Sc, B.Ed" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-chalkboard"></i> Subject Expertise <span style="color: red;">*</span></label>
+                    <select name="Subject Expertise" class="form-control" id="facultySubject" required>
+                        <option value="">Select Subject</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Biology">Biology</option>
+                        <option value="English">English</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Accounts">Accounts</option>
+                        <option value="Economics">Economics</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-briefcase"></i> Experience (Years) <span style="color: red;">*</span></label>
+                    <input type="number" name="Experience" class="form-control" id="facultyExperience" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FACULTY PAYMENT POPUP ===== -->
+<div class="faculty-payment-popup" id="facultyPaymentPopup">
+    <div class="form-card">
+        <div class="close-btn" onclick="closeFacultyPaymentPopup()">&times;</div>
+        <div class="form-header">
+            <h3><i class="fas fa-credit-card"></i> Profile Handling Charges</h3>
+        </div>
+        <div class="form-body" style="text-align: center;">
+            <p>Please pay Rs. 100/- towards profile handling charges.</p>
+            <div class="payment-amount">₹100</div>
+            <div class="qr-box" style="margin: 20px auto;">
+                <img src="images/qrcode.png" alt="Payment QR Code" style="width: 200px; height: 200px;">
+            </div>
+            <p style="color: #667eea; margin: 20px 0;">UPI ID: shikshasupport@okhdfcbank</p>
+            <button class="btn-primary" onclick="closeFacultyPaymentPopup()">I've Paid</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="container nav-flex">
+        <div class="logo-container" onclick="showPage('home')">
+            <div class="logo-icon">
+                <img src="images/sikshalogo.png" alt="Shiksha Support Logo">
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">Shiksha Support</span>
+                <span class="logo-tagline">Empowering Education</span>
+            </div>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a onclick="showPage('home'); closeMenu()" class="active">Home</a>
+            <a onclick="showPage('about'); closeMenu()">About Us</a>
+            <a onclick="showPage('payfees'); closeMenu()">Pay Fees</a>
+            <a onclick="showPage('admission'); closeMenu()">Admission Assistance</a>
+            <a onclick="showPage('contact'); closeMenu()">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HOME PAGE ===== -->
+<div id="home-page" class="page-section active-section">
+    <div class="container home-page">
+        <!-- Image Slider -->
+        <div class="slider-container" data-aos="fade-up">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <div class="slide">
+                    <img src="images/slider1.jpeg" alt="Students studying">
+                    <div class="slide-content">
+                        <h2>Welcome to Shiksha Support</h2>
+                        <p>Empowering Education for a Brighter Future</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/teacherslider2.jpeg" alt="Teacher teaching">
+                    <div class="slide-content">
+                        <h2>Expert Faculty</h2>
+                        <p>Learn from the best educators in the country</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/slider1.jpeg" alt="Online learning">
+                    <div class="slide-content">
+                        <h2>Online & Offline Classes</h2>
+                        <p>Flexible learning options for every student</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+
+        <div class="sections-grid">
+            <!-- Section 1 - Requirement -->
+            <div class="section-box" data-aos="fade-right">
+                <h2><i class="fas fa-hand-peace"></i> We are glad to have you here!</h2>
+                <p style="margin-bottom: 25px; color: #64748b;">Let us know your requirement</p>
+                
+                <div class="requirement-options" id="requirementOptions">
+                    <div class="req-option" onclick="selectRequirement('home')">
+                        <input type="radio" name="requirement" id="reqHome" value="home" checked>
+                        <label for="reqHome">Looking for home tuition</label>
+                    </div>
+                    <div class="req-option" onclick="selectRequirement('group')">
+                        <input type="radio" name="requirement" id="reqGroup" value="group">
+                        <label for="reqGroup">Looking for group tuition nearby</label>
+                    </div>
+                    <div class="req-option" onclick="selectRequirement('online')">
+                        <input type="radio" name="requirement" id="reqOnline" value="online">
+                        <label for="reqOnline">Looking for online classes</label>
+                    </div>
+                </div>
+                
+                <button class="submit-req" onclick="showStudentRequirementPopup()">Continue <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <!-- Section 2 - About Preview -->
+            <div class="section-box" data-aos="fade-left">
+                <h2><i class="fas fa-bullseye"></i> About Shiksha Support</h2>
+                
+                <div class="about-preview">
+                    <p>Shiksha Support, a unit of Jha Classes, is a revolutionary educational platform dedicated to making quality education accessible to every student. We bridge the gap between students and expert educators through personalized learning experiences.</p>
+                    
+                    <a onclick="showPage('about')" class="read-more-link">
+                        Read more about us <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <div class="vision-mission">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To create a world where every student has access to personalized, quality education regardless of their location or background. We envision a future where learning is not confined by geographical boundaries but is a seamless, engaging experience available to all.</p>
+                        
+                        <h3 style="margin-top: 15px;"><i class="fas fa-rocket"></i> Our Mission</h3>
+                        <p>To empower students with the right guidance, resources, and support to achieve their academic goals through innovative teaching methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== ABOUT PAGE ===== -->
+<div id="about-page" class="page-section">
+    <div class="container about-page">
+        <div class="page-header" data-aos="fade-down">
+            <h1>About Shiksha Support</h1>
+            <p style="color: #64748b;">A unit of Jha Classes - Empowering Education Since 2020</p>
+        </div>
+        
+        <div class="about-content" data-aos="fade-up">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-users"></i>
+                    <div class="number">15K+</div>
+                    <div class="label">Students</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="number">500+</div>
+                    <div class="label">Expert Faculty</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-video"></i>
+                    <div class="number">10K+</div>
+                    <div class="label">Video Lessons</div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-smile"></i>
+                    <div class="number">98%</div>
+                    <div class="label">Satisfaction Rate</div>
+                </div>
+            </div>
+            
+            <h2 style="margin: 30px 0 15px;">Our Story</h2>
+            <p>Shiksha Support, a unit of Jha Classes, was founded in 2020 with a simple yet powerful vision - to make quality education accessible to every student in India. What started as a small initiative by a group of passionate educators has now grown into a comprehensive learning platform serving thousands of students across the country. The name "Shiksha Support" combines two Hindi words - "Shiksha" (education) and "Support" - reflecting our commitment to supporting students in their educational journey. We truly believe in building bridges between students and quality education, between learners and expert faculty, between dreams and achievements.</p>
+            
+            <h2 style="margin: 30px 0 15px;">Our Vision</h2>
+            <p>To create a world where every student has access to personalized, quality education regardless of their location or background. We envision a future where learning is not confined by geographical boundaries but is a seamless, engaging experience available to all.</p>
+            
+            <h2 style="margin: 30px 0 15px;">Our Mission</h2>
+            <p>To empower students with the right guidance, resources, and support to achieve their academic goals through innovative teaching methods. We strive to provide personalized learning experiences, connect students with highly qualified educators, leverage technology for interactive learning, and create a supportive community of learners and faculty.</p>
+            
+            <div class="mission-text">
+                <p><strong>H.O. :</strong> ShikshaSupport, 122/5/1, Laldora, Sant Nagar, Delhi- 84</p>
+                <p><strong>B.O. :</strong> Jha Classes, GF, F - 4/6, Sector - 16, Rohini, Delhi - 85</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== PAY FEES PAGE ===== -->
+<div id="payfees-page" class="page-section">
+    <div class="container payfees-page">
+        <div class="payfees-header" data-aos="fade-down">
+            <h1>Pay Fee Online</h1>
+            <p>Select your payment type</p>
+        </div>
+        
+        <div class="fee-category-grid" data-aos="fade-up">
+            <div class="fee-category-card" onclick="showPaymentForm('home')">
+                <div class="fee-category-icon"><i class="fas fa-home"></i></div>
+                <h3>Home Tuition</h3>
+                <p>Pay for home tuition</p>
+                <span class="fee-category-badge">Click to Pay</span>
+            </div>
+            
+            <div class="fee-category-card" onclick="showPaymentForm('online')">
+                <div class="fee-category-icon"><i class="fas fa-laptop"></i></div>
+                <h3>Online Classes</h3>
+                <p>Pay for online classes</p>
+                <span class="fee-category-badge">Click to Pay</span>
+            </div>
+            
+            <div class="fee-category-card" onclick="showPaymentForm('group')">
+                <div class="fee-category-icon"><i class="fas fa-users"></i></div>
+                <h3>Group Tuition</h3>
+                <p>Pay for group tuition</p>
+                <span class="fee-category-badge">Click to Pay</span>
+            </div>
+        </div>
+        
+        <!-- Payment Form - Home Tuition -->
+        <div class="payment-form-container" id="homeTuitionForm">
+            <div class="payment-form-header">
+                <i class="fas fa-home"></i>
+                <div>
+                    <h3>Home Tuition Payment</h3>
+                    <p>Fill the details to pay for home tuition</p>
+                </div>
+            </div>
+            
+            <form id="homeTuitionPaymentForm" onsubmit="submitPaymentForm(event, 'home')">
+                <input type="hidden" name="_subject" value="Home Tuition Payment - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="teacher-name-field">
+                    <label><i class="fas fa-chalkboard-teacher"></i> Fill teacher's name <span class="mandatory-badge">Mandatory</span></label>
+                    <input type="text" name="Teacher Name" class="form-control" required>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+                        <input type="text" name="Student Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> Registered Mobile <span style="color: red;">*</span></label>
+                        <input type="tel" name="Registered Mobile" class="form-control" placeholder="10-digit mobile" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Class/Grade <span style="color: red;">*</span></label>
+                        <select name="Class" class="form-control" required>
+                            <option value="">Select Class</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="LKG">LKG</option>
+                            <option value="UKG">UKG</option>
+                            <option value="Class 1">Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            <option value="Class 4">Class 4</option>
+                            <option value="Class 5">Class 5</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-pin"></i> City/Pin Code <span style="color: red;">*</span></label>
+                        <input type="text" name="CityPin" class="form-control" placeholder="City and Pin Code" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+                        <input type="text" name="Subject" class="form-control" placeholder="Fill subject name" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+                        <input type="number" name="Amount" class="form-control" placeholder="Enter amount" min="1" step="1" required>
+                    </div>
+                </div>
+                
+                <div class="qr-section">
+                    <img src="images/qrcode.png" alt="Payment QR Code">
+                    <p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+                </div>
+                
+                <div class="warning-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>कृपया सभी जानकारी सही-सही भरें। गलत जानकारी देने पर भुगतान रद्द किया जा सकता है।</span>
+                </div>
+                
+                <button type="submit" class="btn-primary">SUBMIT</button>
+            </form>
+            
+            <div class="transaction-section" id="homeTransaction">
+                <h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+                <form onsubmit="submitTransaction(event, 'home')">
+                    <input type="hidden" name="_subject" value="Home Tuition Transaction ID - Shiksha Support">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+                        <input type="text" name="Transaction ID" class="form-control" placeholder="Enter transaction ID" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Payment Form - Online Classes -->
+        <div class="payment-form-container" id="onlineClassesForm">
+            <div class="payment-form-header">
+                <i class="fas fa-laptop"></i>
+                <div>
+                    <h3>Online Classes Payment</h3>
+                    <p>Fill the details to pay for online classes</p>
+                </div>
+            </div>
+            
+            <form id="onlineClassesPaymentForm" onsubmit="submitPaymentForm(event, 'online')">
+                <input type="hidden" name="_subject" value="Online Classes Payment - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="teacher-name-field">
+                    <label><i class="fas fa-chalkboard-teacher"></i> Fill teacher's name <span class="mandatory-badge">Mandatory</span></label>
+                    <input type="text" name="Teacher Name" class="form-control" required>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+                        <input type="text" name="Student Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> Registered Mobile <span style="color: red;">*</span></label>
+                        <input type="tel" name="Registered Mobile" class="form-control" placeholder="10-digit mobile" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Class/Grade <span style="color: red;">*</span></label>
+                        <select name="Class" class="form-control" required>
+                            <option value="">Select Class</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="LKG">LKG</option>
+                            <option value="UKG">UKG</option>
+                            <option value="Class 1">Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            <option value="Class 4">Class 4</option>
+                            <option value="Class 5">Class 5</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-pin"></i> City/Pin Code <span style="color: red;">*</span></label>
+                        <input type="text" name="CityPin" class="form-control" placeholder="City and Pin Code" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+                        <input type="text" name="Subject" class="form-control" placeholder="Fill subject name" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+                        <input type="number" name="Amount" class="form-control" placeholder="Enter amount" min="1" step="1" required>
+                    </div>
+                </div>
+                
+                <div class="qr-section">
+                    <img src="images/qrcode.png" alt="Payment QR Code">
+                    <p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+                </div>
+                
+                <div class="warning-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>कृपया सभी जानकारी सही-सही भरें। गलत जानकारी देने पर भुगतान रद्द किया जा सकता है।</span>
+                </div>
+                
+                <button type="submit" class="btn-primary">SUBMIT</button>
+            </form>
+            
+            <div class="transaction-section" id="onlineTransaction">
+                <h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+                <form onsubmit="submitTransaction(event, 'online')">
+                    <input type="hidden" name="_subject" value="Online Classes Transaction ID - Shiksha Support">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+                        <input type="text" name="Transaction ID" class="form-control" placeholder="Enter transaction ID" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Payment Form - Group Tuition -->
+        <div class="payment-form-container" id="groupTuitionForm">
+            <div class="payment-form-header">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>Group Tuition Payment</h3>
+                    <p>Fill the details to pay for group tuition</p>
+                </div>
+            </div>
+            
+            <form id="groupTuitionPaymentForm" onsubmit="submitPaymentForm(event, 'group')">
+                <input type="hidden" name="_subject" value="Group Tuition Payment - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="center-name-field">
+                    <label><i class="fas fa-building"></i> Fill center Name <span class="mandatory-badge">Mandatory</span></label>
+                    <input type="text" name="Center Name" class="form-control" required>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Name <span style="color: red;">*</span></label>
+                        <input type="text" name="Student Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-id-card"></i> Registered Mobile <span style="color: red;">*</span></label>
+                        <input type="tel" name="Registered Mobile" class="form-control" placeholder="10-digit mobile" pattern="[0-9]{10}" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Class/Grade <span style="color: red;">*</span></label>
+                        <select name="Class" class="form-control" required>
+                            <option value="">Select Class</option>
+                            <option value="Nursery">Nursery</option>
+                            <option value="LKG">LKG</option>
+                            <option value="UKG">UKG</option>
+                            <option value="Class 1">Class 1</option>
+                            <option value="Class 2">Class 2</option>
+                            <option value="Class 3">Class 3</option>
+                            <option value="Class 4">Class 4</option>
+                            <option value="Class 5">Class 5</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                            <option value="Class 12">Class 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-pin"></i> City/Pin Code <span style="color: red;">*</span></label>
+                        <input type="text" name="CityPin" class="form-control" placeholder="City and Pin Code" required>
+                    </div>
+                </div>
+                
+                <div class="row-flex">
+                    <div class="form-group">
+                        <label><i class="fas fa-book"></i> Subject <span style="color: red;">*</span></label>
+                        <input type="text" name="Subject" class="form-control" placeholder="Fill subject name" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-rupee-sign"></i> Amount <span style="color: red;">*</span></label>
+                        <input type="number" name="Amount" class="form-control" placeholder="Enter amount" min="1" step="1" required>
+                    </div>
+                </div>
+                
+                <div class="qr-section">
+                    <img src="images/qrcode.png" alt="Payment QR Code">
+                    <p style="color: #667eea; margin-top: 10px;">Scan QR to pay</p>
+                </div>
+                
+                <div class="warning-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>कृपया सभी जानकारी सही-सही भरें। गलत जानकारी देने पर भुगतान रद्द किया जा सकता है।</span>
+                </div>
+                
+                <button type="submit" class="btn-primary">SUBMIT</button>
+            </form>
+            
+            <div class="transaction-section" id="groupTransaction">
+                <h4 style="margin-bottom: 20px;">Enter Transaction ID</h4>
+                <form onsubmit="submitTransaction(event, 'group')">
+                    <input type="hidden" name="_subject" value="Group Tuition Transaction ID - Shiksha Support">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="form-group">
+                        <label><i class="fas fa-hashtag"></i> Transaction ID <span style="color: red;">*</span></label>
+                        <input type="text" name="Transaction ID" class="form-control" placeholder="Enter transaction ID" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="payment-note">
+            <i class="fas fa-info-circle"></i>
+            <p>Payment of any amount is not a confirmation of full and final payment. Full and final payment shall be subject to proper accounting and calculation of class hours.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===== ADMISSION ASSISTANCE PAGE ===== -->
+<div id="admission-page" class="page-section">
+    <div class="container admission-page">
+        <!-- Hero Section -->
+        <div class="admission-hero" data-aos="fade-up">
+            <h1>Admission Assistance</h1>
+            <p>Get expert guidance for school and college admissions across India. We help you find the perfect institution for your academic journey.</p>
+        </div>
+        
+        <!-- Institution Showcase -->
+        <div class="institution-showcase" data-aos="fade-up">
+            <h2>Partner Institutions</h2>
+            <div class="institution-grid">
+                <div class="institution-card">
+                    <img src="images/slider1.jpeg" alt="University">
+                    <div class="institution-info">
+                        <h3>Partner Institution</h3>
+                        <p>Prestigious educational institute</p>
+                    </div>
+                </div>
+                <div class="institution-card">
+                    <img src="images/teacherslider2.jpeg" alt="University">
+                    <div class="institution-info">
+                        <h3>Partner Institution</h3>
+                        <p>Premier educational institute</p>
+                    </div>
+                </div>
+                <div class="institution-card">
+                    <img src="images/slider1.jpeg" alt="University">
+                    <div class="institution-info">
+                        <h3>Partner Institution</h3>
+                        <p>Top-ranked university</p>
+                    </div>
+                </div>
+                <div class="institution-card">
+                    <img src="images/teacherslider2.jpeg" alt="Medical College">
+                    <div class="institution-info">
+                        <h3>Partner Institution</h3>
+                        <p>Premier medical college</p>
+                    </div>
+                </div>
+                <div class="institution-card">
+                    <img src="images/slider1.jpeg" alt="University">
+                    <div class="institution-info">
+                        <h3>Partner Institution</h3>
+                        <p>Leading private university</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features -->
+        <div class="admission-features">
+            <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fas fa-university"></i>
+                <h3>100+ Colleges</h3>
+                <p>We may assist you in securing admission in more than 100 prestigious Institutions & Universities in the course of your interest like B.Tech, Medical, Law, MBA, MCA, various UG & PG programs, Ph.D courses.</p>
+            </div>
+            <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-check-circle"></i>
+                <h3>Personalized Guidance</h3>
+                <p>Get our experts counseling for every step of your admission journey at a very nominal fee.</p>
+            </div>
+            <div class="feature-box" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-rupee-sign"></i>
+                <h3>Affordable Fees</h3>
+                <p>We are here to assist you in getting admission of your ward in Prestigious Schools for any class or standard.</p>
+            </div>
+        </div>
+        
+        <!-- Admission Form -->
+        <div class="admission-form-container" data-aos="fade-up">
+            <h3>Request Admission Assistance</h3>
+            <p>Fill the form below and our counselors will get in touch with you</p>
+            
+            <form action="https://formsubmit.co/shikshasupport@gmail.com" method="POST" onsubmit="return validateAdmission()">
+                <input type="hidden" name="_subject" value="New Admission Assistance Request - Shiksha Support">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Student Name <span style="color: red;">*</span></label>
+                    <input type="text" name="Student Name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Date of Birth <span style="color: red;">*</span></label>
+                    <input type="date" name="Date of Birth" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-graduation-cap"></i> Current Class/Grade <span style="color: red;">*</span></label>
+                    <select name="Current Class" class="form-control" required>
+                        <option value="">Select Current Class</option>
+                        <option value="Nursery">Nursery</option><option value="LKG">LKG</option><option value="UKG">UKG</option>
+                        <option value="Class 1">Class 1</option><option value="Class 2">Class 2</option><option value="Class 3">Class 3</option>
+                        <option value="Class 4">Class 4</option><option value="Class 5">Class 5</option><option value="Class 6">Class 6</option>
+                        <option value="Class 7">Class 7</option><option value="Class 8">Class 8</option><option value="Class 9">Class 9</option>
+                        <option value="Class 10">Class 10</option><option value="Class 11">Class 11</option><option value="Class 12">Class 12</option>
+                        <option value="UG">UG</option><option value="PG">PG</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-school"></i> Admission Seeking For <span style="color: red;">*</span></label>
+                    <select name="Admission For" class="form-control" required>
+                        <option value="">Select Level</option>
+                        <option value="Primary School">Primary School (Nursery - Class 5)</option>
+                        <option value="Secondary School">Secondary School (Class 6 - 10)</option>
+                        <option value="Higher Secondary">Higher Secondary (Class 11 - 12)</option>
+                        <option value="College">College/University</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-phone"></i> Parent's Contact <span style="color: red;">*</span></label>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width: 100px;"><select name="Country Code" class="form-control" style="padding: 15px 5px;"><option value="+91" selected>+91</option></select></div>
+                        <div style="flex: 1;"><input type="tel" name="Parent Contact" class="form-control" required></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email <span style="color: red;">*</span></label>
+                    <input type="email" name="Email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Address <span style="color: red;">*</span></label>
+                    <textarea name="Address" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-comment"></i> Preferred Schools/Colleges (if any)</label>
+                    <textarea name="Preferred Institutions" class="form-control" rows="2" placeholder="List any specific schools or colleges you're interested in"></textarea>
+                </div>
+                
+                <div class="consent-checkbox">
+                    <input type="checkbox" id="consentCheckbox" required>
+                    <label for="consentCheckbox">I authorize the representative from Shiksha Support team to connect me any time with reference to my request. I shall have no objection whatsoever it is, if the call is made at any time on any day.</label>
+                </div>
+                
+                <div class="warning-text">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>कृपया सभी जानकारी सही-सही भरें। गलत जानकारी देने पर आपका आवेदन रद्द किया जा सकता है।</span>
+                </div>
+                
+                <button type="submit" class="btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CONTACT PAGE ===== -->
+<div id="contact-page" class="page-section">
+    <div class="container contact-page">
+        <div class="page-header" data-aos="fade-down">
+            <h1>Contact Us</h1>
+            <p style="color: #64748b;">Get in touch with us</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+                <h3 style="margin-bottom: 30px;">Contact Information</h3>
+                
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p><strong>H.O. :</strong> ShikshaSupport, 122/5/1, Laldora, Sant Nagar, Delhi- 84</p>
+                        <p><strong>B.O. :</strong> Jha Classes, GF, F - 4/6, Sector - 16, Rohini, Delhi - 85</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fab fa-whatsapp whatsapp-link"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/919311036210" target="_blank" class="clickable-link whatsapp-link">+91 93110 36210</a><br>
+                        <a href="https://wa.me/917053886423" target="_blank" class="clickable-link whatsapp-link">+91 70538 86423</a><br>
+                        <a href="https://wa.me/917050624940" target="_blank" class="clickable-link whatsapp-link">+91 70506 24940</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:shikshasupport@gmail.com" class="clickable-link">shikshasupport@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                        <p>Sunday: 10:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-location">
+                <div class="main-location">
+                    <p><strong>H.O. :</strong> ShikshaSupport, 122/5/1, Laldora, Sant Nagar, Delhi- 84</p>
+                    <p><strong>B.O. :</strong> Jha Classes, GF, F - 4/6, Sector - 16, Rohini, Delhi - 85</p>
+                </div>
+                <div class="branch">
+                    <i class="fas fa-location-dot"></i> Branch: Sector 16, Rohini, Delhi - 110085
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div>
+                    <a href="https://wa.me/919311036210" target="_blank" class="clickable-link"><i class="fab fa-whatsapp"></i> +91 93110 36210</a>
+                </div>
+                <div>
+                    <a href="https://wa.me/917053886423" target="_blank" class="clickable-link"><i class="fab fa-whatsapp"></i> +91 70538 86423</a>
+                </div>
+                <div>
+                    <a href="mailto:shikshasupport@gmail.com" class="clickable-link"><i class="fas fa-envelope"></i> shikshasupport@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Shiksha Support (A unit of Jha Classes). All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50
+    });
+
+    // ===== AI CHATBOT =====
+    function toggleChatbot() {
+        document.getElementById('chatbot').classList.toggle('active');
+    }
+
+    function sendMessage() {
+        const input = document.getElementById('chatInput');
+        const message = input.value.trim();
+        if (!message) return;
+
+        // Add user message
+        addMessage(message, 'user');
+        input.value = '';
+
+        // Generate bot response
+        setTimeout(() => {
+            const response = getBotResponse(message.toLowerCase());
+            addMessage(response, 'bot');
+        }, 1000);
+    }
+
+    function addMessage(text, sender) {
+        const chat = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${sender}`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        contentDiv.innerHTML = text;
+        
+        messageDiv.appendChild(contentDiv);
+        chat.appendChild(messageDiv);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    function getBotResponse(message) {
+        // Website information database
+        const responses = {
+            // Tuition related
+            'home tuition': '🏠 We offer home tuition from Nursery to Class 12. Our expert teachers visit your home for personalized coaching. You can book a demo class through the "Student" option in welcome popup.',
+            'online classes': '💻 Yes, we provide live online classes for all subjects. Flexible timings and recorded sessions available. Go to "Student" section and select "Tuition Support" to get started.',
+            'group tuition': '👥 Group tuition is available at our center in Rohini, Sector 16. Small batches (5-8 students) for better attention. Visit our "Contact" page for address.',
+            'tuition fees': '💰 Tuition fees vary by class and subject. Please contact us directly for detailed fee structure. You can also use the "Pay Fees" page to make payments.',
+            'subjects': '📚 We teach all major subjects: Mathematics, Science, Physics, Chemistry, Biology, English, Hindi, Sanskrit, History, Geography, Computer Science, Accounts, Economics, and more!',
+            'class 10': '🎓 Class 10 coaching available for CBSE, ICSE, and state boards. Complete syllabus coverage with previous year papers. Book a demo class today!',
+            'class 12': '🎓 Class 12 coaching for all streams (Science, Commerce, Arts). Special focus on board exams and competitive exams like JEE, NEET, CUET.',
+            'competitive exams': '📝 We provide coaching for NEET, JEE, NDA, CUET, NCLAT, CAT, and other competitive exams. Expert faculty with years of experience.',
+            
+            // Admission related
+            'admission': '🎯 We provide admission assistance for schools and colleges across India. We have partnerships with 100+ institutions. Click the "Admission Assistance" tab for more info.',
+            'college admission': '🏛️ We help with college admissions for B.Tech, Medical, Law, MBA, MCA, various UG & PG programs, and Ph.D courses. Fill the admission assistance form to get started.',
+            'school admission': '🏫 We assist with school admissions from Nursery to Class 12. We have tie-ups with prestigious schools in Delhi NCR.',
+            
+            // Faculty related
+            'faculty registration': '👨‍🏫 Want to join as a teacher? Click "Faculty" in the welcome popup and fill the registration form. Registration fee is ₹100.',
+            'teacher registration': '👩‍🏫 We welcome experienced teachers. Register through the "Faculty" option in welcome popup.',
+            'become teacher': '✨ To become a teacher with us, please complete the faculty registration form. We look forward to having you on our team!',
+            
+            // Payment related
+            'pay fees': '💰 You can pay fees online through the "Pay Fees" page. Select your tuition type (Home/Online/Group) and fill the payment details.',
+            'payment': '💳 For fee payment, go to "Pay Fees" page. You can pay via QR code scan.',
+            'transaction id': '🔑 After making payment, please enter your transaction ID on the same page to confirm your payment.',
+            
+            // Contact & Address
+            'contact': '📞 You can contact us on WhatsApp: +91 93110 36210, +91 70538 86423, or email: shikshasupport@gmail.com',
+            'phone': '📱 Our WhatsApp numbers: 93110 36210, 70538 86423, 70506 24940. Click on numbers to open WhatsApp chat.',
+            'email': '📧 Email us at: shikshasupport@gmail.com',
+            'address': '📍 H.O.: ShikshaSupport, 122/5/1, Laldora, Sant Nagar, Delhi-84\n📍 B.O.: Jha Classes, GF, F-4/6, Sector-16, Rohini, Delhi-85',
+            'branch': '🏢 Our branch is located at Sector 16, Rohini, Delhi - 110085. Visit us for group tuition and counseling.',
+            'rohini': '📍 Our Rohini branch: GF, F-4/6, Sector-16, Rohini, Delhi-85. We have group tuition and admission assistance available here.',
+            'sant nagar': '📍 Our head office: 122/5/1, Laldora, Sant Nagar, Delhi-84.',
+            
+            // General
+            'hello': '👋 Hello! How can I help you today? Feel free to ask about tuition, admissions, faculty registration, or payments.',
+            'hi': '👋 Hi there! What would you like to know about Shiksha Support?',
+            'help': '🆘 I can help you with:\n• Tuition classes (home/online/group)\n• Admission assistance\n• Faculty registration\n• Fee payment\n• Contact details\n\nJust ask me anything!',
+            'thanks': '😊 You\'re welcome! If you have more questions, feel free to ask.',
+            'thank you': '😊 Happy to help! Let me know if you need anything else.',
+            'bye': '👋 Goodbye! Feel free to chat again if you have more questions.',
+            'namaste': '🙏 Namaste! Welcome to Shiksha Support. How may I assist you today?'
+        };
+
+        // Check for keywords in message
+        for (let key in responses) {
+            if (message.includes(key)) {
+                return responses[key];
+            }
+        }
+
+        // If no match found, show enquiry button
+        return `
+            🤔 I'm not sure about that. For specific queries, please send us a message on WhatsApp.
+            <br><br>
+            <a href="https://wa.me/919311036210?text=Hi! I have a question about: ${encodeURIComponent(message)}" target="_blank" style="text-decoration: none;">
+                <button class="enquiry-button">
+                    <i class="fab fa-whatsapp"></i> Send Enquiry on WhatsApp
+                </button>
+            </a>
+        `;
+    }
+
+    // ===== MOBILE MENU =====
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    function closeMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.remove('active');
+    }
+
+    // ===== WELCOME POPUP =====
+    window.onload = function() {
+        document.getElementById('welcomePopup').classList.remove('hidden');
+    };
+
+    function selectUserType(type) {
+        document.getElementById('welcomePopup').classList.add('hidden');
+        
+        if (type === 'student') {
+            document.getElementById('interestedPopup').classList.add('active');
+        } else if (type === 'faculty') {
+            showFacultyRegistrationPopup();
+        } else if (type === 'institution') {
+            showPage('contact');
+        }
+    }
+
+    // ===== INTERESTED POPUP =====
+    function closeInterestedPopup() {
+        document.getElementById('interestedPopup').classList.remove('active');
+    }
+
+    function selectInterest(type) {
+        closeInterestedPopup();
+        
+        if (type === 'tuition') {
+            showPage('home');
+        } else if (type === 'admission') {
+            showPage('admission');
+        }
+    }
+
+    // ===== STUDENT FLOW =====
+    let selectedRequirement = 'home';
+
+    function selectRequirement(type) {
+        selectedRequirement = type;
+        document.getElementById('reqHome').checked = (type === 'home');
+        document.getElementById('reqGroup').checked = (type === 'group');
+        document.getElementById('reqOnline').checked = (type === 'online');
+    }
+
+    function showStudentRequirementPopup() {
+        document.getElementById('studentRequirementPopup').classList.add('active');
+    }
+
+    function closeStudentRequirementPopup() {
+        document.getElementById('studentRequirementPopup').classList.remove('active');
+    }
+
+    function submitStudentRequirement(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('reqName').value;
+        const phone = document.getElementById('reqPhone').value;
+        const city = document.getElementById('reqCity').value;
+        const locality = document.getElementById('reqLocality').value;
+        const pincode = document.getElementById('reqPincode').value;
+        const educationLevel = document.getElementById('educationLevel').value;
+        let selectedClass = '';
+        
+        if (educationLevel === 'other') {
+            selectedClass = document.getElementById('otherClass').value;
+        } else {
+            selectedClass = document.getElementById('classSelect').value;
+        }
+        
+        const board = document.getElementById('reqBoard').value;
+        
+        if (!name || !phone || !city || !locality || !pincode || !selectedClass || !board) {
+            alert('Please fill all fields');
+            return false;
+        }
+        
+        const formData = new FormData();
+        formData.append('_subject', 'Student Requirement - Shiksha Support');
+        formData.append('Name', name);
+        formData.append('Phone', '+91' + phone);
+        formData.append('City', city);
+        formData.append('Locality', locality);
+        formData.append('Pincode', pincode);
+        formData.append('Education Level', educationLevel);
+        formData.append('Class', selectedClass);
+        formData.append('Board', board);
+        formData.append('Requirement Type', selectedRequirement);
+        
+        fetch('https://formsubmit.co/shikshasupport@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            closeStudentRequirementPopup();
+            document.getElementById('studentSubjectsPopup').classList.add('active');
+        })
+        .catch(error => {
+            closeStudentRequirementPopup();
+            document.getElementById('studentSubjectsPopup').classList.add('active');
+        });
+        
+        return false;
+    }
+
+    function closeStudentSubjectsPopup() {
+        document.getElementById('studentSubjectsPopup').classList.remove('active');
+    }
+
+    function submitStudentSubjects(event) {
+        event.preventDefault();
+        
+        const checkboxes = document.querySelectorAll('#studentSubjectsForm input[name="subjects[]"]:checked');
+        let subjects = Array.from(checkboxes).map(cb => cb.value);
+        
+        const otherSubject = document.querySelector('#otherSubjectBox input')?.value;
+        if (document.getElementById('otherSubjectCheckbox').checked && otherSubject) {
+            subjects.push(otherSubject);
+        }
+        
+        if (subjects.length === 0) {
+            alert('Please select at least one subject');
+            return false;
+        }
+        
+        const formData = new FormData();
+        formData.append('_subject', 'Student Subjects Selection - Shiksha Support');
+        formData.append('Subjects', subjects.join(', '));
+        
+        fetch('https://formsubmit.co/shikshasupport@gmail.com', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            alert('Thank you! Your requirement has been submitted successfully.');
+            closeStudentSubjectsPopup();
+        })
+        .catch(error => {
+            alert('Thank you! Your requirement has been submitted successfully.');
+            closeStudentSubjectsPopup();
+        });
+        
+        return false;
+    }
+
+    // ===== FACULTY FLOW =====
+    function showFacultyRegistrationPopup() {
+        document.getElementById('facultyRegistrationPopup').classList.add('active');
+    }
+
+    function closeFacultyRegistrationPopup() {
+        document.getElementById('facultyRegistrationPopup').classList.remove('active');
+    }
+
+    function showFacultyPaymentPopup() {
+        document.getElementById('facultyPaymentPopup').classList.add('active');
+    }
+
+    function closeFacultyPaymentPopup() {
+        document.getElementById('facultyPaymentPopup').classList.remove('active');
+    }
+
+    function submitFacultyRegistration(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('facultyName').value;
+        const city = document.getElementById('facultyCity').value;
+        const location = document.getElementById('facultyLocation').value;
+        const pincode = document.getElementById('facultyPincode').value;
+        const mobile = document.getElementById('facultyMobile').value;
+        const alternate = document.getElementById('facultyAlternate').value;
+        const qualification = document.getElementById('facultyQualification').value;
+        const subject = document.getElementById('facultySubject').value;
+        const experience = document.getElementById('facultyExperience').value;
+        
+        if (!name || !city || !location || !pincode || !mobile || !qualification || !subject || !experience) {
+            alert('Please fill all required fields');
+            return false;
+        }
+        
+        const formData = new FormData();
+        formData.append('_subject', 'New Faculty Registration - Shiksha Support');
+        formData.append('Name', name);
+        formData.append('City', city);
+        formData.append('Location', location);
+        formData.append('Pin Code', pincode);
+        formData.append('Mobile', '+91' + mobile);
+        if (alternate) formData.append('Alternate', '+91' + alternate);
+        formData.append('Qualification', qualification);
+        formData.append('Subject', subject);
+        formData.append('Experience', experience);
+        formData.append('Status', 'Pending Payment');
+        
+        fetch('https://formsubmit.co/shikshasupport@gmail.com', {
+            method: 'POST',
+            body: formData
+        });
+        
+        closeFacultyRegistrationPopup();
+        showFacultyPaymentPopup();
+        
+        return false;
+    }
+
+    // ===== PAY FEES PAGE FUNCTIONS =====
+    function showPaymentForm(type) {
+        document.getElementById('homeTuitionForm').classList.remove('active');
+        document.getElementById('onlineClassesForm').classList.remove('active');
+        document.getElementById('groupTuitionForm').classList.remove('active');
+        
+        document.getElementById('homeTransaction').classList.remove('active');
+        document.getElementById('onlineTransaction').classList.remove('active');
+        document.getElementById('groupTransaction').classList.remove('active');
+        
+        if (type === 'home') {
+            document.getElementById('homeTuitionForm').classList.add('active');
+        } else if (type === 'online') {
+            document.getElementById('onlineClassesForm').classList.add('active');
+        } else if (type === 'group') {
+            document.getElementById('groupTuitionForm').classList.add('active');
+        }
+    }
+
+    function submitPaymentForm(event, type) {
+        event.preventDefault();
+        
+        let formData;
+        if (type === 'home') {
+            formData = new FormData(document.getElementById('homeTuitionPaymentForm'));
+        } else if (type === 'online') {
+            formData = new FormData(document.getElementById('onlineClassesPaymentForm'));
+        } else if (type === 'group') {
+            formData = new FormData(document.getElementById('groupTuitionPaymentForm'));
+        }
+        
+        formData.append('Payment Type', type === 'home' ? 'Home Tuition' : type === 'online' ? 'Online Classes' : 'Group Tuition');
+        
+        fetch('https://formsubmit.co/shikshasupport@gmail.com', {
+            method: 'POST',
+            body: formData
+        });
+        
+        if (type === 'home') {
+            document.getElementById('homeTransaction').classList.add('active');
+        } else if (type === 'online') {
+            document.getElementById('onlineTransaction').classList.add('active');
+        } else if (type === 'group') {
+            document.getElementById('groupTransaction').classList.add('active');
+        }
+        
+        setTimeout(() => {
+            document.getElementById(type + 'Transaction').scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        
+        return false;
+    }
+
+    function submitTransaction(event, type) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        formData.append('Payment Type', type === 'home' ? 'Home Tuition' : type === 'online' ? 'Online Classes' : 'Group Tuition');
+        
+        fetch('https://formsubmit.co/shikshasupport@gmail.com', {
+            method: 'POST',
+            body: formData
+        });
+        
+        alert('Transaction ID submitted successfully! We will verify your payment shortly.');
+        
+        if (type === 'home') {
+            document.getElementById('homeTransaction').classList.remove('active');
+        } else if (type === 'online') {
+            document.getElementById('onlineTransaction').classList.remove('active');
+        } else if (type === 'group') {
+            document.getElementById('groupTransaction').classList.remove('active');
+        }
+        
+        return false;
+    }
+
+    // ===== PINCODE AUTO-FILL =====
+    function fetchCityFromPincode() {
+        const pincode = document.getElementById('reqPincode').value;
+        const hintDiv = document.getElementById('pincodeHint');
+        const cityInput = document.getElementById('reqCity');
+        
+        if (pincode.length === 6) {
+            fetch(`https://api.postalpincode.in/pincode/${pincode}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data[0].Status === 'Success') {
+                        const city = data[0].PostOffice[0].District;
+                        const state = data[0].PostOffice[0].State;
+                        cityInput.value = city;
+                        hintDiv.textContent = `City: ${city}, ${state}`;
+                        hintDiv.classList.add('show');
+                    } else {
+                        hintDiv.textContent = 'Pincode not found. Please enter city manually.';
+                        hintDiv.classList.add('show');
+                        cityInput.readOnly = false;
+                    }
+                })
+                .catch(error => {
+                    console.log('API error');
+                });
+        } else {
+            hintDiv.classList.remove('show');
+            cityInput.readOnly = false;
+        }
+    }
+
+    // ===== EDUCATION LEVEL CLASS OPTIONS =====
+    function updateClassOptions() {
+        const educationLevel = document.getElementById('educationLevel').value;
+        const classSelect = document.getElementById('classSelect');
+        const classContainer = document.getElementById('classSelectionContainer');
+        const otherContainer = document.getElementById('otherClassContainer');
+        
+        if (educationLevel === 'other') {
+            classContainer.style.display = 'none';
+            otherContainer.style.display = 'block';
+        } else {
+            classContainer.style.display = 'block';
+            otherContainer.style.display = 'none';
+            
+            // Populate classes based on education level
+            let options = [];
+            if (educationLevel === 'primary') {
+                options = ['Nursery', 'LKG', 'UKG', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5'];
+            } else if (educationLevel === 'secondary') {
+                options = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10'];
+            } else if (educationLevel === 'higher') {
+                options = ['Class 11', 'Class 12'];
+            } else if (educationLevel === 'ug') {
+                options = ['UG 1st Year', 'UG 2nd Year', 'UG 3rd Year', 'UG 4th Year'];
+            } else if (educationLevel === 'pg') {
+                options = ['PG 1st Year', 'PG 2nd Year'];
+            }
+            
+            classSelect.innerHTML = '';
+            options.forEach(opt => {
+                const option = document.createElement('option');
+                option.value = opt;
+                option.textContent = opt;
+                classSelect.appendChild(option);
+            });
+        }
+    }
+
+    // ===== OTHER SUBJECT HANDLER =====
+    document.addEventListener('DOMContentLoaded', function() {
+        const otherCheckbox = document.getElementById('otherSubjectCheckbox');
+        if (otherCheckbox) {
+            otherCheckbox.addEventListener('change', function() {
+                const otherBox = document.getElementById('otherSubjectBox');
+                if (this.checked) {
+                    otherBox.classList.add('show');
+                } else {
+                    otherBox.classList.remove('show');
+                }
+            });
+        }
+    });
+
+    // ===== SLIDER =====
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.onclick = () => goToSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    setInterval(nextSlide, 5000);
+
+    // ===== PAGE NAVIGATION =====
+    function showPage(page) {
+        document.querySelectorAll('.page-section').forEach(section => {
+            section.classList.remove('active-section');
+        });
+        document.getElementById(page + '-page').classList.add('active-section');
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        const navLinks = document.querySelectorAll('.nav-links a');
+        if (page === 'home') navLinks[0].classList.add('active');
+        else if (page === 'about') navLinks[1].classList.add('active');
+        else if (page === 'payfees') navLinks[2].classList.add('active');
+        else if (page === 'admission') navLinks[3].classList.add('active');
+        else if (page === 'contact') navLinks[4].classList.add('active');
+        
+        setTimeout(() => {
+            AOS.refresh();
+        }, 100);
+        
+        closeMenu();
+    }
+
+    // ===== ADMISSION VALIDATION =====
+    function validateAdmission() {
+        const consent = document.getElementById('consentCheckbox').checked;
+        if (!consent) {
+            alert('Please give your consent to proceed');
+            return false;
+        }
+        alert('Admission assistance request submitted! We will contact you soon.');
+        return true;
+    }
+
+    // Make functions global
+    window.toggleChatbot = toggleChatbot;
+    window.sendMessage = sendMessage;
+    window.toggleMenu = toggleMenu;
+    window.closeMenu = closeMenu;
+    window.selectUserType = selectUserType;
+    window.closeInterestedPopup = closeInterestedPopup;
+    window.selectInterest = selectInterest;
+    window.selectRequirement = selectRequirement;
+    window.showStudentRequirementPopup = showStudentRequirementPopup;
+    window.closeStudentRequirementPopup = closeStudentRequirementPopup;
+    window.submitStudentRequirement = submitStudentRequirement;
+    window.closeStudentSubjectsPopup = closeStudentSubjectsPopup;
+    window.submitStudentSubjects = submitStudentSubjects;
+    window.showFacultyRegistrationPopup = showFacultyRegistrationPopup;
+    window.closeFacultyRegistrationPopup = closeFacultyRegistrationPopup;
+    window.showFacultyPaymentPopup = showFacultyPaymentPopup;
+    window.closeFacultyPaymentPopup = closeFacultyPaymentPopup;
+    window.submitFacultyRegistration = submitFacultyRegistration;
+    window.showPaymentForm = showPaymentForm;
+    window.submitPaymentForm = submitPaymentForm;
+    window.submitTransaction = submitTransaction;
+    window.fetchCityFromPincode = fetchCityFromPincode;
+    window.updateClassOptions = updateClassOptions;
+    window.prevSlide = prevSlide;
+    window.nextSlide = nextSlide;
+    window.goToSlide = goToSlide;
+    window.showPage = showPage;
+    window.validateAdmission = validateAdmission;
+</script>
+</body>
+</html>
